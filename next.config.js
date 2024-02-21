@@ -8,4 +8,4 @@ const nextConfig = {
   pageExtensions: ["tsx", "api.ts"],
 };
 
-export default nextConfig;
+module.exports = nextConfig;
