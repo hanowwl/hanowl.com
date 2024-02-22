@@ -2,7 +2,7 @@ import { BannerPng } from "src/assets";
 
 import styled from "@emotion/styled";
 
-export const MainSectionContainer = styled.div`
+export const MainSectionContainer = styled.section`
   height: 100vh;
   width: 100%;
   background-image: url(${BannerPng.src});

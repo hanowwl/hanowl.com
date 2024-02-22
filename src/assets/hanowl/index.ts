@@ -1,0 +1,11 @@
+export { default as Hanowl1Png } from "./hanowl_1.png";
+export { default as Hanowl2Jpg } from "./hanowl_2.jpg";
+export { default as Hanowl3Png } from "./hanowl_3.jpg";
+export { default as Hanowl4Jpg } from "./hanowl_4.jpg";
+export { default as Hanowl5Png } from "./hanowl_5.png";
+export { default as Hanowl6Png } from "./hanowl_6.png";
+export { default as Hanowl7Png } from "./hanowl_7.png";
+export { default as Hanowl8Jpg } from "./hanowl_8.jpg";
+export { default as Hanowl9Png } from "./hanowl_9.png";
+export { default as Hanowl10Png } from "./hanowl_10.png";
+export { default as Hanowl11Png } from "./hanowl_11.png";

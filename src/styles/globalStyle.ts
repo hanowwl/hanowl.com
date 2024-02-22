@@ -7,12 +7,16 @@ export const globalStyle = () => css`
   ${reset}
 
   * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     box-sizing: border-box;
   }
 
   html,
   body,
   #__next {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     height: 100%;
   }
 
@@ -23,6 +27,10 @@ export const globalStyle = () => css`
   body {
     color: ${colors.text};
     background-color: ${colors.background};
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   #__next {
