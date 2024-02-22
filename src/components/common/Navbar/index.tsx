@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import { AnimatePresence } from "framer-motion";
-
 import * as S from "./styled";
 import { Text } from "../Text";
 
@@ -19,33 +17,18 @@ export const Navbar: React.FC = () => {
     };
   }, []);
 
-  const initialAnimation = { backgroundColor: "transparent", backdropFilter: "blur(0px)" };
-  const animateAnimation = {
-    backgroundColor: isScrolled ? "rgba(0,0,0,0.3)" : "transparent",
-    backdropFilter: isScrolled ? "blur(10px)" : "blur(0px)",
-  };
-  const exitAnimation = { backgroundColor: "transparent", backdropFilter: "blur(0px)" };
-  const transitionAnimation = { duration: 0.4 };
-
   const onTitleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <AnimatePresence>
-      <S.NavbarContainer
-        initial={initialAnimation}
-        animate={animateAnimation}
-        exit={exitAnimation}
-        transition={transitionAnimation}
-      >
-        <S.NavbarInnerContainer>
-          <Text size={2.8} weight={700} onClick={onTitleClick}>
-            HANOWL
-          </Text>
-          <S.NavbarLinkText href={"/teams"}>부서소개</S.NavbarLinkText>
-        </S.NavbarInnerContainer>
-      </S.NavbarContainer>
-    </AnimatePresence>
+    <S.NavbarContainer isScrolled={isScrolled}>
+      <S.NavbarInnerContainer>
+        <Text size={2.8} weight={700} onClick={onTitleClick}>
+          HANOWL
+        </Text>
+        <S.NavbarLinkText href={"/teams"}>부서소개</S.NavbarLinkText>
+      </S.NavbarInnerContainer>
+    </S.NavbarContainer>
   );
 };

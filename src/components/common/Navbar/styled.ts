@@ -3,11 +3,10 @@ import Link from "next/link";
 import { colors } from "src/styles";
 
 import styled from "@emotion/styled";
-import { motion } from "framer-motion";
 
 import { Container } from "../../layouts/Container";
 
-export const NavbarContainer = styled(motion.nav)`
+export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
   width: 100%;
   position: fixed;
   top: 0;
@@ -16,6 +15,11 @@ export const NavbarContainer = styled(motion.nav)`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: ${({ isScrolled }) => (isScrolled ? "rgba(0,0,0,0.3)" : "transparent")};
+  backdrop-filter: ${({ isScrolled }) => (isScrolled ? "blur(1rem)" : "blur(0px)")};
+  transition:
+    background-color,
+    backdrop-filter 0.4s ease-in-out;
 `;
 
 export const NavbarInnerContainer = styled(Container)`
