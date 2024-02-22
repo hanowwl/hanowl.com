@@ -4,6 +4,7 @@ export default function Home() {
   return (
     <main>
       <Main.MainSection />
+      <Main.HanowlSection />
     </main>
   );
 }
