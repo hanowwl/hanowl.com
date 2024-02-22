@@ -6,15 +6,20 @@ import styled from "@emotion/styled";
 
 import { Container } from "../../layouts/Container";
 
-export const NavbarContainer = styled.nav`
+export const NavbarContainer = styled.nav<{ isScrolled: boolean }>`
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 100;
   padding: 20px 0;
-  backdrop-filter: blur(1rem);
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  background-color: ${({ isScrolled }) => (isScrolled ? "rgba(0,0,0,0.3)" : "transparent")};
+  backdrop-filter: ${({ isScrolled }) => (isScrolled ? "blur(1rem)" : "blur(0px)")};
+  transition:
+    background-color,
+    backdrop-filter 0.4s ease-in-out;
 `;
 
 export const NavbarInnerContainer = styled(Container)`
