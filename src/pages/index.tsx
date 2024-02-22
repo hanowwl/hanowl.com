@@ -1,11 +1,19 @@
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
 
+import * as S from "./styled";
+
 export default function Home() {
   return (
-    <main>
+    <S.MainPageContainer>
       <Main.MainSection />
-      <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-    </main>
+      <section>
+        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
+        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
+        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
+        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
+        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
+      </section>
+    </S.MainPageContainer>
   );
 }

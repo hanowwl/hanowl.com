@@ -12,7 +12,7 @@ export interface SectionLayoutCustomProps {
   fullWidth?: boolean;
 }
 
-export type SectionLayoutProps = SectionLayoutCustomProps & React.HTMLAttributes<HTMLDivElement>;
+export type SectionLayoutProps = SectionLayoutCustomProps & React.HTMLAttributes<HTMLElement>;
 
 export const SectionLayout: React.FC<SectionLayoutProps> = ({
   children,
