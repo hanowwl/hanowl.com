@@ -1,7 +1,9 @@
+import { Main } from "src/components/main";
+
 export default function Home() {
   return (
     <main>
-      <h1>Home Page</h1>
+      <Main.MainSection />
     </main>
   );
 }
