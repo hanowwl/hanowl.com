@@ -27,6 +27,10 @@ export const Navbar: React.FC = () => {
   const exitAnimation = { backgroundColor: "transparent", backdropFilter: "blur(0px)" };
   const transitionAnimation = { duration: 0.4 };
 
+  const onTitleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <AnimatePresence>
       <S.NavbarContainer
@@ -36,7 +40,7 @@ export const Navbar: React.FC = () => {
         transition={transitionAnimation}
       >
         <S.NavbarInnerContainer>
-          <Text size={2.8} weight={700}>
+          <Text size={2.8} weight={700} onClick={onTitleClick}>
             HANOWL
           </Text>
           <S.NavbarLinkText href={"/teams"}>부서소개</S.NavbarLinkText>

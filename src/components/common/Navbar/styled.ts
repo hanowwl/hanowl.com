@@ -15,6 +15,7 @@ export const NavbarContainer = styled(motion.nav)`
   padding: 20px 0;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 export const NavbarInnerContainer = styled(Container)`

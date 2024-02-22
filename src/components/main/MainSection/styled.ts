@@ -7,7 +7,7 @@ export const MainSectionContainer = styled.div`
   width: 100%;
   background-image: url(${BannerPng.src});
   background-blend-mode: multiply;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-color: rgba(27, 26, 26, 0.8);
   display: flex;
