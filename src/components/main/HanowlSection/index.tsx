@@ -1,10 +1,15 @@
 import React from "react";
 
+import { RecordCard, RecordCardProps } from "src/components/common/RecordCard";
 import { Container, SectionLayout } from "src/components/layouts";
 
-export interface HanowlSectionProps {}
+import * as S from "./styled";
 
-export const HanowlSection: React.FC = () => {
+export interface HanowlSectionProps {
+  records: RecordCardProps[];
+}
+
+export const HanowlSection: React.FC<HanowlSectionProps> = ({ records }) => {
   return (
     <SectionLayout
       subTitle="학생회 활동"
@@ -13,9 +18,11 @@ export const HanowlSection: React.FC = () => {
       fullWidth
     >
       <Container>
-        <div>
-          <h1>dkd rlahfld~~</h1>
-        </div>
+        <S.HanowlSectionRecordContainer>
+          {records.map(({ name, value }) => (
+            <RecordCard key={name} name={name} value={value} />
+          ))}
+        </S.HanowlSectionRecordContainer>
       </Container>
       <div>
         <h1>dkd rlahfld~~</h1>

@@ -1,14 +1,12 @@
-import { SectionLayout } from "src/components/layouts";
-
 import styled from "@emotion/styled";
 
-export const HanowlSectionContainer = styled(SectionLayout)`
-  height: 100vh !important;
+export const HanowlSectionRecordContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2rem;
-`;
+  justify-content: space-between;
 
-// export const
+  @media screen and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.6rem;
+  }
+`;

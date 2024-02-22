@@ -4,9 +4,9 @@ export const SectionLayoutContainer = styled.section<{ height?: string }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  row-gap: 4rem;
-  padding: 4rem 0;
+  justify-content: flex-start;
+  row-gap: 6rem;
+  padding: 16rem 0;
   height: ${({ height }) => (height ? `${height}` : "auto")};
 `;
 

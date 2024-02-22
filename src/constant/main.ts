@@ -1,3 +1,5 @@
+import { HanowlSectionProps } from "src/components/main/HanowlSection";
+
 export const MAIN_SECTIONS = {
   HANOWL_RECORDS: [
     {
@@ -16,5 +18,5 @@ export const MAIN_SECTIONS = {
       name: "한움 이용자 수",
       value: { from: 0, to: 120, suffix: "명 +" },
     },
-  ],
+  ] as HanowlSectionProps["records"],
 };

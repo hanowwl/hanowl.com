@@ -24,8 +24,8 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
     <S.SectionLayoutContainer height={height}>
       <Container>
         <S.SectionLayoutTitleContainer>
-          <Text size={1.4}>{subTitle}</Text>
-          <Text size={3} weight={700}>
+          <Text size={1.8}>{subTitle}</Text>
+          <Text size={3.6} weight={700}>
             {title}
           </Text>
         </S.SectionLayoutTitleContainer>
