@@ -7,13 +7,7 @@ export default function Home() {
   return (
     <S.MainPageContainer>
       <Main.MainSection />
-      <section>
-        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-        <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-      </section>
+      <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
     </S.MainPageContainer>
   );
 }

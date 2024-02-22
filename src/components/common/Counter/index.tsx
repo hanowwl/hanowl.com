@@ -8,7 +8,7 @@ export interface CounterProps {
   suffix: string;
 }
 
-export const Counter: React.FC<CounterProps> = ({ from, to, suffix = "" }) => {
+export const Counter: React.FC<CounterProps> = ({ from, to, suffix }) => {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [isInView, setIsInView] = useState<boolean>(false);
 
