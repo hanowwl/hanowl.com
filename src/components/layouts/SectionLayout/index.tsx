@@ -5,23 +5,24 @@ import { Text } from "src/components/common";
 import * as S from "./styled";
 import { Container } from "../Container";
 
-export interface SectionLayoutProps {
+export interface SectionLayoutCustomProps {
   subTitle: string;
   title: string;
   children: React.ReactNode;
-  height?: string;
   fullWidth?: boolean;
 }
+
+export type SectionLayoutProps = SectionLayoutCustomProps & React.HTMLAttributes<HTMLDivElement>;
 
 export const SectionLayout: React.FC<SectionLayoutProps> = ({
   children,
   subTitle,
   title,
-  height,
   fullWidth,
+  ...props
 }) => {
   return (
-    <S.SectionLayoutContainer height={height}>
+    <S.SectionLayoutContainer {...props}>
       <Container>
         <S.SectionLayoutTitleContainer>
           <Text size={1.8}>{subTitle}</Text>

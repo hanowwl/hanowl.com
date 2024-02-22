@@ -8,7 +8,7 @@ export interface CounterProps {
   suffix: string;
 }
 
-export const Counter: React.FC<CounterProps> = ({ from, to, suffix }) => {
+export const Counter: React.FC<CounterProps> = ({ from, to, suffix = "" }) => {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [isInView, setIsInView] = useState<boolean>(false);
 
@@ -17,7 +17,6 @@ export const Counter: React.FC<CounterProps> = ({ from, to, suffix }) => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        console.log(entries, "it is showing");
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsInView(true);

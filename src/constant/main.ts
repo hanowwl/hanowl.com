@@ -1,3 +1,5 @@
+import { HANOWL_IMAGES } from "src/assets";
+import { ImageBannerProps } from "src/components/common/ImageBanner";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
 
 export const MAIN_SECTIONS = {
@@ -19,4 +21,6 @@ export const MAIN_SECTIONS = {
       value: { from: 0, to: 120, suffix: "명 +" },
     },
   ] as HanowlSectionProps["records"],
+
+  IMAGES: [HANOWL_IMAGES.slice(0, 5), HANOWL_IMAGES.slice(6)] as ImageBannerProps["imageGroups"],
 };
