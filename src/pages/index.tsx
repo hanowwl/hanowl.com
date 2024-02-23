@@ -16,6 +16,8 @@ export default function Home() {
 
       if (container.scrollHeight - container.scrollTop === container.clientHeight) {
         setIsEnd(true);
+      } else {
+        setIsEnd(false);
       }
     };
 
