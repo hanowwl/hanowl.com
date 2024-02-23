@@ -21,14 +21,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, id
 
     const { scrollHeight } = answerElement;
     answerElement.style.height = isQuestionClosed ? "0" : `${scrollHeight}px`;
-    answerElement.style.visibility = isQuestionClosed ? "hidden" : "visible";
-    if (isQuestionClosed) {
-      setTimeout(() => {
-        answerElement.style.position = "absolute";
-      }, 80);
-    } else {
-      answerElement.style.position = "relative";
-    }
   }, [isQuestionClosed]);
 
   useEffect(() => {
@@ -36,7 +28,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, id
   }, [id]);
 
   return (
-    <S.QuestionCard onClick={() => setIsQuestionClosed((prev) => !prev)}>
+    <S.QuestionCard onClick={() => setIsQuestionClosed((prev) => !prev)} closed={isQuestionClosed}>
       <Text size={2} weight={700}>
         {question}
       </Text>

@@ -2,7 +2,7 @@ import { colors } from "src/styles";
 
 import styled from "@emotion/styled";
 
-export const QuestionCard = styled.div`
+export const QuestionCard = styled.div<{ closed: boolean }>`
   width: 100%;
   padding: 1.6rem;
   background-color: ${colors.qnaCard};
@@ -14,10 +14,10 @@ export const QuestionCard = styled.div`
   position: relative;
   cursor: pointer;
   user-select: none;
+  padding-bottom: ${({ closed }) => (closed ? "0" : "1.6rem")};
 `;
 
 export const QuestionCardList = styled.ul`
-  position: absolute;
   overflow: hidden;
   list-style: inside;
   list-style-position: outside;
@@ -25,5 +25,5 @@ export const QuestionCardList = styled.ul`
     margin-left: 2.2rem;
   }
   row-gap: 1rem;
-  transition: height 150ms;
+  transition: height 200ms;
 `;
