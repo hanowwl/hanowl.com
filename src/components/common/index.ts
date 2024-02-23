@@ -3,4 +3,5 @@ export * from "./Text";
 export * from "./RecordCard";
 export * from "./Counter";
 export * from "./ImageBanner";
-export * from "./QuestionButton";
+export * from "./QnATeamButton";
+export * from "./QuestionCard";

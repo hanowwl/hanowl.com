@@ -1,10 +1,20 @@
 import styled from "@emotion/styled";
 
-export const QnASectionButtonContainer = styled.div`
+export const QnASectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 6rem;
+`;
+
+export const QnASectionTeamContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   @media screen and (max-width: 767px) {
     gap: 0.4rem;
   }
+`;
+
+export const QnASectionCardContainer = styled(QnASectionContainer)`
+  row-gap: 2rem;
 `;

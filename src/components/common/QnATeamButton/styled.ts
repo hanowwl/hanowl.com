@@ -4,10 +4,10 @@ import { colors } from "src/styles";
 
 import styled from "@emotion/styled";
 
-import { QuestionCustomButtonProps } from ".";
+import { QnATeamButtonCustomProps } from ".";
 
-export const QuestionButton = styled.div<Pick<QuestionCustomButtonProps, "isSelected">>`
-  background-color: ${({ isSelected }) => (isSelected ? colors.qnaClicked : colors.qnaCard)};
+export const QnATeamButton = styled.div<Pick<QnATeamButtonCustomProps, "isSelected">>`
+  background-color: ${({ isSelected }) => (isSelected ? colors.qnaClicked : colors.card)};
   padding: 1.6rem 0;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ export const QuestionButton = styled.div<Pick<QuestionCustomButtonProps, "isSele
   }
 `;
 
-export const QuestionButtonIcon = styled(Image)`
+export const QnATeamIcon = styled(Image)`
   width: 2.6rem;
   height: 2.6rem;
   @media screen and (max-width: 767px) {
