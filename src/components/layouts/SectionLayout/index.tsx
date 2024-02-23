@@ -26,9 +26,17 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
       <Container>
         <S.SectionLayoutTitleContainer>
           <Text size={1.8}>{subTitle}</Text>
-          <Text size={3.6} weight={700}>
-            {title}
-          </Text>
+          {title.includes("\n") ? (
+            title.split("\n").map((text, index) => (
+              <Text size={3.6} weight={700} key={index} style={{ lineHeight: 0.8 }}>
+                {text}
+              </Text>
+            ))
+          ) : (
+            <Text size={3.6} weight={700}>
+              {title}
+            </Text>
+          )}
         </S.SectionLayoutTitleContainer>
       </Container>
       {fullWidth ? children : <Container>{children}</Container>}

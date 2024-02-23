@@ -17,5 +17,5 @@ export const SectionLayoutTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  row-gap: 0.6rem;
+  row-gap: 2rem;
 `;

@@ -8,7 +8,7 @@ export default function Home() {
     <S.MainPageContainer>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-      <Main.QnASection />
+      <Main.QnASection qnaList={MAIN_SECTIONS.QUESTIONS} />
     </S.MainPageContainer>
   );
 }
