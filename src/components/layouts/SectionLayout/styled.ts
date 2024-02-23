@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const SectionLayoutContainer = styled.section`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -12,9 +14,9 @@ export const SectionLayoutContainer = styled.section`
   }
 `;
 
-export const SectionLayoutTitleContainer = styled.div`
+export const SectionLayoutTitleContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   text-align: left;
-  row-gap: 0.6rem;
+  row-gap: 2rem;
 `;
