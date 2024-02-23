@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const SectionLayoutContainer = styled.section`
   min-height: 100vh;
@@ -13,7 +14,7 @@ export const SectionLayoutContainer = styled.section`
   }
 `;
 
-export const SectionLayoutTitleContainer = styled.div`
+export const SectionLayoutTitleContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   text-align: left;

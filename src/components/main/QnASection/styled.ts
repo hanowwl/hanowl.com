@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
 export const QnASectionContainer = styled.div`
   display: flex;
@@ -6,7 +7,7 @@ export const QnASectionContainer = styled.div`
   row-gap: 6rem;
 `;
 
-export const QnASectionTeamContainer = styled.div`
+export const QnASectionTeamContainer = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
@@ -15,6 +16,8 @@ export const QnASectionTeamContainer = styled.div`
   }
 `;
 
-export const QnASectionCardContainer = styled(QnASectionContainer)`
+export const QnASectionCardContainer = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
   row-gap: 2rem;
 `;

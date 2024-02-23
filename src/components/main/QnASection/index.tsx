@@ -4,6 +4,7 @@ import { StaticImageData } from "next/image";
 
 import { QnATeamButton } from "src/components/common";
 import { QuestionCard, QuestionCardProps } from "src/components/common/QuestionCard";
+import { useFadeInScroll } from "src/components/hooks";
 import { SectionLayout } from "src/components/layouts";
 
 import * as S from "./styled";
@@ -31,6 +32,8 @@ export interface QnASectionProps {
 }
 
 export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
+  const { fadeInScroll } = useFadeInScroll();
+
   const [isSelected, setIsSelected] = useState<QnAIdType>(qnaList[0].id);
   const questions = useMemo(() => qnaList.find((v) => v.id === isSelected), [qnaList, isSelected]);
 
@@ -39,9 +42,13 @@ export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
   };
 
   return (
-    <SectionLayout subTitle="자주 묻는 질문" title={`학생회에 대해\n궁금한 점이있으신가요?`}>
+    <SectionLayout
+      subTitle="자주 묻는 질문"
+      title={`학생회에 대해\n궁금한 점이있으신가요?`}
+      hadFadeInAnimation
+    >
       <S.QnASectionContainer>
-        <S.QnASectionTeamContainer>
+        <S.QnASectionTeamContainer {...fadeInScroll({ delay: 0.2 })}>
           {qnaList.map(({ text, icon, id }, index) => (
             <QnATeamButton
               key={index}
@@ -52,7 +59,7 @@ export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
             />
           ))}
         </S.QnASectionTeamContainer>
-        <S.QnASectionCardContainer>
+        <S.QnASectionCardContainer {...fadeInScroll({ delay: 0.4 })}>
           {questions &&
             questions.list.map((props, index) => (
               <QuestionCard key={index} {...props} id={isSelected} />

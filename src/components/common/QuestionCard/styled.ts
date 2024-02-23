@@ -12,6 +12,8 @@ export const QuestionCard = styled.div`
   row-gap: 1.4rem;
   border-radius: 1.2rem;
   position: relative;
+  cursor: pointer;
+  user-select: none;
 `;
 
 export const QuestionCardList = styled.ul`

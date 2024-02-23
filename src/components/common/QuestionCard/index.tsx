@@ -25,7 +25,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, id
     if (isQuestionClosed) {
       setTimeout(() => {
         answerElement.style.position = "absolute";
-      }, 130);
+      }, 80);
     } else {
       answerElement.style.position = "relative";
     }
