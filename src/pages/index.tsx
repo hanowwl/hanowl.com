@@ -37,6 +37,7 @@ export default function Home() {
     <S.MainPageContainer isEnd={isEnd} ref={containerRef}>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
+      <Main.EventSection />
       <Main.QnASection qnaList={MAIN_SECTIONS.QUESTIONS} />
     </S.MainPageContainer>
   );
