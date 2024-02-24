@@ -10,7 +10,6 @@ export const HanowlSectionContainer = styled.div`
 export const HanowlSectionRecordContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   @media screen and (max-width: 767px) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

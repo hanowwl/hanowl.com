@@ -1,8 +1,6 @@
-import { Text } from "src/components/common";
 import { EventCard } from "src/components/common";
 import { useFadeInScroll } from "src/components/hooks";
 import { SectionLayout } from "src/components/layouts";
-import { Container } from "src/components/layouts";
 import { MAIN_SECTIONS } from "src/constant/main";
 
 import * as S from "./styled";
@@ -15,7 +13,7 @@ export const EventSection: React.FC = () => {
       title={`학생회가\n 만들어낸 새로운 모습`}
       hadFadeInAnimation
     >
-      <S.EventSectionContainer {...fadeInScroll({ delay: 0.2 })}>
+      <S.EventSectionWrapper {...fadeInScroll({ delay: 0.2 })}>
         <S.EventSectionContentContainer>
           {MAIN_SECTIONS.EVENTS.map(({ title, events, background_img }, i) => (
             <EventCard
@@ -26,7 +24,7 @@ export const EventSection: React.FC = () => {
             ></EventCard>
           ))}
         </S.EventSectionContentContainer>
-      </S.EventSectionContainer>
+      </S.EventSectionWrapper>
     </SectionLayout>
   );
 };
