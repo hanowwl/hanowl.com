@@ -7,17 +7,6 @@ export const ImageBannerContainer = styled.section`
   display: flex;
   flex-direction: column;
   row-gap: 2.8rem;
-
-  img {
-    width: 30rem;
-    height: 20rem;
-  }
-  @media screen and (max-width: 767px) {
-    img {
-      width: 30rem;
-      height: 15rem;
-    }
-  }
 `;
 
 export const Image = styled.div<{ src: StaticImageData }>`
