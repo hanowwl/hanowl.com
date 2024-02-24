@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 import styled from "@emotion/styled";
 
 export const EventCard = styled.div<{ src: StaticImageData }>`
-  width: 36rem;
+  width: 100%;
   height: 22rem;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,4 @@ export const EventCard = styled.div<{ src: StaticImageData }>`
   background-size: cover;
   background-position: center;
   cursor: default;
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
 `;

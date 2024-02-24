@@ -8,8 +8,8 @@ export const HanowlSectionContainer = styled.div`
 `;
 
 export const HanowlSectionRecordContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
   @media screen and (max-width: 767px) {
     display: grid;

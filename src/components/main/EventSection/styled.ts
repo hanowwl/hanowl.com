@@ -11,11 +11,10 @@ export const EventSectionContainer = styled(motion.div)`
 `;
 
 export const EventSectionContentContainer = styled.div`
-  width: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+
   @media screen and (max-width: 767px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
