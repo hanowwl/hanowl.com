@@ -15,24 +15,11 @@ export const EventSectionContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 2rem;
   @media screen and (max-width: 767px) {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
     grid-gap: 2rem;
   }
-`;
-
-export const EventSectionContent = styled.div<{ src: StaticImageData }>`
-  width: 36rem;
-  height: 22rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 2rem;
-  padding: 1.4rem 2rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(${({ src }) => src.src});
-  background-size: cover;
-  background-position: center;
-  cursor: default;
 `;
