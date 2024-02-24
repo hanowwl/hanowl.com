@@ -1,5 +1,5 @@
 import * as hanowl from "./hanowl";
-
+export * as eventPng from "./event";
 export * from "./icons";
 export { default as BannerPng } from "./banner/banner.png";
 

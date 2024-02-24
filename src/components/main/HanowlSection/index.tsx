@@ -13,12 +13,7 @@ export interface HanowlSectionProps {
 
 export const HanowlSection: React.FC<HanowlSectionProps> = ({ records }) => {
   return (
-    <SectionLayout
-      subTitle="학생회 활동"
-      title={`학생회가\n 만들어낸 새로운 모습`}
-      fullWidth
-      style={{ height: "100vh" }}
-    >
+    <SectionLayout subTitle="학생회 활동" title={`학생회가\n 만들어낸 새로운 모습`} fullWidth>
       <S.HanowlSectionContainer>
         <Container>
           <S.HanowlSectionRecordContainer>
