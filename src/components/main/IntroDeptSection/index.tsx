@@ -7,11 +7,11 @@ import { useFadeInScroll } from "src/components/hooks";
 import { SectionLayout } from "src/components/layouts";
 
 import * as S from "./styled";
-import { arrow } from "src/assets";
 
 export interface IntroMenuItem {
   text: string;
   intro: string;
+  introSecond: string;
   icon: StaticImageData;
   arrow: StaticImageData;
 }
@@ -31,8 +31,15 @@ export const IntroDeptSection: React.FC<IntroDeptSectionProps> = ({ IntroList })
     >
       <S.IntroDeptSectionContainer>
         <S.IntroDeptSectionTeamContainer {...fadeInScroll({ delay: 0.2 })}>
-          {IntroList.map(({ text, icon, intro, arrow }, index) => (
-            <IntroDeptBox key={index} text={text} icon={icon} intro={intro} arrow={arrow} />
+          {IntroList.map(({ text, icon, intro, introSecond, arrow }, index) => (
+            <IntroDeptBox
+              key={index}
+              text={text}
+              icon={icon}
+              intro={intro}
+              introSecond={introSecond}
+              arrow={arrow}
+            />
           ))}
         </S.IntroDeptSectionTeamContainer>
       </S.IntroDeptSectionContainer>
