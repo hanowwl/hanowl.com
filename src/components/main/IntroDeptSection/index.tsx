@@ -10,10 +10,9 @@ import * as S from "./styled";
 
 export interface IntroMenuItem {
   text: string;
-  intro: string;
+  introFirst: string;
   introSecond: string;
   icon: StaticImageData;
-  arrow: StaticImageData;
 }
 
 export interface IntroDeptSectionProps {
@@ -31,15 +30,8 @@ export const IntroDeptSection: React.FC<IntroDeptSectionProps> = ({ IntroList })
     >
       <S.IntroDeptSectionContainer>
         <S.IntroDeptSectionTeamContainer {...fadeInScroll({ delay: 0.2 })}>
-          {IntroList.map(({ text, icon, intro, introSecond, arrow }, index) => (
-            <IntroDeptBox
-              key={index}
-              text={text}
-              icon={icon}
-              intro={intro}
-              introSecond={introSecond}
-              arrow={arrow}
-            />
+          {IntroList.map((props, index) => (
+            <IntroDeptBox key={index} {...props} />
           ))}
         </S.IntroDeptSectionTeamContainer>
       </S.IntroDeptSectionContainer>
