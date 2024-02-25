@@ -5,3 +5,4 @@ export * from "./Counter";
 export * from "./ImageBanner";
 export * from "./QnATeamButton";
 export * from "./QuestionCard";
+export * from "./IntroDeptBox";

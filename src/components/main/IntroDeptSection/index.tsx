@@ -1,12 +1,26 @@
 import React from "react";
 
-import { SectionLayout } from "src/components/layouts";
+import { StaticImageData } from "next/image";
+
+import { IntroDeptBox } from "src/components/common";
 import { useFadeInScroll } from "src/components/hooks";
-import { Text } from "src/components/common";
+import { SectionLayout } from "src/components/layouts";
 
 import * as S from "./styled";
+import { arrow } from "src/assets";
 
-export const IntroDeptSection: React.FC = () => {
+export interface IntroMenuItem {
+  text: string;
+  intro: string;
+  icon: StaticImageData;
+  arrow: StaticImageData;
+}
+
+export interface IntroDeptSectionProps {
+  IntroList: IntroMenuItem[];
+}
+
+export const IntroDeptSection: React.FC<IntroDeptSectionProps> = ({ IntroList }) => {
   const { fadeInScroll } = useFadeInScroll();
 
   return (
@@ -17,9 +31,9 @@ export const IntroDeptSection: React.FC = () => {
     >
       <S.IntroDeptSectionContainer>
         <S.IntroDeptSectionTeamContainer {...fadeInScroll({ delay: 0.2 })}>
-          <Text size={2} weight={700} style={{ textAlign: "center" }}>
-            here is introduce department
-          </Text>
+          {IntroList.map(({ text, icon, intro, arrow }, index) => (
+            <IntroDeptBox key={index} text={text} icon={icon} intro={intro} arrow={arrow} />
+          ))}
         </S.IntroDeptSectionTeamContainer>
       </S.IntroDeptSectionContainer>
     </SectionLayout>
