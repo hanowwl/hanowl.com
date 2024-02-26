@@ -9,7 +9,6 @@ import { Container } from "../../layouts/Container";
 export const NavbarContainer = styled.nav`
   width: 100%;
   position: fixed;
-  top: 0;
   z-index: 100;
   padding: 20px 0;
   align-items: center;
@@ -19,7 +18,6 @@ export const NavbarContainer = styled.nav`
   transition:
     background-color,
     backdrop-filter 0.4s ease-in-out;
-  display: none;
 `;
 
 export const NavbarInnerContainer = styled(Container)`

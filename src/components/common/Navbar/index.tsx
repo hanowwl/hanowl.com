@@ -1,10 +1,14 @@
 import React from "react";
 
+import { useRouter } from "next/router";
+
 import * as S from "./styled";
 import { Text } from "../Text";
 
 export const Navbar: React.FC = () => {
+  const router = useRouter();
   const onTitleClick = () => {
+    router.push("/");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
