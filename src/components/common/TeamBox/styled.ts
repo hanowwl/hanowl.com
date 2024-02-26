@@ -4,7 +4,7 @@ import { colors } from "src/styles";
 
 import styled from "@emotion/styled";
 
-export const IntroDeptBoxContainer = styled.div`
+export const TeamBox = styled.div`
   background-color: ${colors.card};
   padding: 1.4rem;
   border-radius: 1.6rem;
@@ -17,25 +17,12 @@ export const IntroDeptBoxContainer = styled.div`
   }
 `;
 
-export const IntroDeptBoxArrowIcon = styled(Image)`
+export const TeamBoxLinkIcon = styled(Image)`
   float: right;
   width: 2rem;
   height: 2rem;
 `;
-
-export const IntroDeptBoxTeam = styled.p`
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.3;
-`;
-
-export const IntroDeptBoxTitle = styled.h1`
-  font-size: 2.4rem;
-  font-weight: 700;
-  line-height: 1.3;
-`;
-
-export const IntroTeamIcon = styled(Image)`
+export const TeamBoxIcon = styled(Image)`
   width: 4.6rem;
   height: 4.6rem;
   @media screen and (max-width: 767px) {

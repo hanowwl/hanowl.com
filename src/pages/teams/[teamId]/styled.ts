@@ -12,6 +12,12 @@ export const TeamTitleContainer = styled.div`
   row-gap: 0.6rem;
 `;
 
+export const TeamDescription = styled.p`
+  font-size: 1.5rem;
+  color: ${colors.gray};
+  line-height: 1.3;
+`;
+
 export const TeamIntroduceContainer = styled.div`
   display: flex;
   flex-direction: column;

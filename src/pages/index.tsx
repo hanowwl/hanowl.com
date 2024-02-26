@@ -38,7 +38,7 @@ export default function Home() {
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
       <Main.EventSection events={MAIN_SECTIONS.EVENTS} />
-      <Main.IntroDeptSection IntroList={MAIN_SECTIONS.INTRO_DEPT} />
+      <Main.IntroDeptSection teams={MAIN_SECTIONS.INTRO_DEPT} />
       <Main.QnASection qnaList={MAIN_SECTIONS.QUESTIONS} />
     </S.MainPageContainer>
   );

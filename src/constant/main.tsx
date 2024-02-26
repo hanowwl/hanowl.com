@@ -3,7 +3,7 @@ import * as I from "src/assets";
 import { ImageBannerProps } from "src/components/common/ImageBanner";
 import { EventSectionProps } from "src/components/main/EventSection";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
-import { IntroDeptSectionProps } from "src/components/main/IntroDeptSection";
+import { TeamsSectionProps } from "src/components/main/TeamsSection";
 import { QnASectionProps } from "src/components/main/QnASection";
 
 import { TEAM_ID_TO_TEXT } from "./teams";
@@ -117,7 +117,7 @@ export const MAIN_SECTIONS = {
         </>
       ),
     },
-  ] as IntroDeptSectionProps["IntroList"],
+  ] as TeamsSectionProps["IntroList"],
   EVENTS: [
     {
       title: [

@@ -6,14 +6,15 @@ import { Container, Text } from "src/components";
 import { TeamIntroduce } from "src/components/teams";
 import { TEAM_LIST } from "src/constant";
 import { useQueryParams } from "src/hooks";
-import { colors } from "src/styles";
 
 import * as S from "./styled";
 
 export default function TeamPage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const { teamId } = useQueryParams<{ teamId: string }>();
   const route = useRouter();
+  const { teamId } = useQueryParams<{ teamId: string }>();
+
+  const [isLoading, setIsLoading] = useState(true);
+
   const activeTeam = useMemo(() => TEAM_LIST.find((v) => v.id === teamId), [teamId]);
 
   useEffect(() => {
@@ -27,14 +28,14 @@ export default function TeamPage() {
     <S.TeamContainer>
       <Container>
         <S.TeamTitleContainer>
-          <Text size={3.2} weight={700}>
+          <Text size={3.6} weight={700}>
             현재 모집 중인 부문
           </Text>
-          <Text size={1.6} color={colors.gray}>
+          <S.TeamDescription>
             알찬 학교 생활을 보내고 싶나요? 선/후배들과 친해지고 싶나요?
             <br />
             인싸가 되고 싶나요? 그럼 드루와 드루와
-          </Text>
+          </S.TeamDescription>
         </S.TeamTitleContainer>
         <S.TeamIntroduceContainer>
           <S.TeamList>

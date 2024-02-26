@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const IntroDeptSectionTeamContainer = styled.div`
+export const TeamsSectionContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;

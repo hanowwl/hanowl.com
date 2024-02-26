@@ -52,7 +52,7 @@ export const TEAM_LIST: TeamItem[] = [
             여러 프로젝트에 참여하면서 기획/디자인/개발/운영 모든 단계에 참여하면서, 경험을 쌓을 수
             있어요.
             <br />
-            <div style={{ display: "flex", gap: "0.8rem" }}>
+            <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
               <Link
                 href="https://github.com/hanowwl"
                 target="_blank"
