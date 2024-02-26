@@ -15,7 +15,6 @@ export const EventCard: React.FC<EventCardProps> = ({ title, events, background_
       <Text size={2.8} weight={600}>
         {title}
       </Text>
-      <br />
       <Text size={1.8} weight={300}>
         {events}
       </Text>

@@ -10,8 +10,9 @@ export const IntroDeptBoxContainer = styled.div`
   border-radius: 1.6rem;
   display: flex;
   flex-direction: column;
-  row-gap: 0.8rem;
+  row-gap: 0.4rem;
   @media screen and (max-width: 767px) {
+    row-gap: 0.4rem;
     padding: 1.6rem;
   }
 `;
@@ -23,18 +24,14 @@ export const IntroDeptBoxArrowIcon = styled(Image)`
 `;
 
 export const IntroDeptBoxTeam = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.3;
-  /* @media screen and (max-width: 360px) {
-    font-size: 1.6rem;
-
-  } */
 `;
 
 export const IntroDeptBoxTitle = styled.h1`
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 700;
   line-height: 1.3;
 `;
 

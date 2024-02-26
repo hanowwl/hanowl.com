@@ -33,50 +33,89 @@ export const MAIN_SECTIONS = {
     {
       team: TEAM_ID_TO_TEXT.tech,
       icon: I.TechIcon,
-      introFirst: "교내 소프트웨어를",
-      introSecond: "만들고 싶다면?",
-    },
-    {
-      team: TEAM_ID_TO_TEXT.design,
-      icon: I.DesignIcon,
-      introFirst: "학생회와 관련된 디자인을",
-      introSecond: "하고 싶다면?",
+      description: (
+        <>
+          교내 소프트웨어를
+          <br />
+          만들어 보고 싶다면
+        </>
+      ),
     },
     {
       team: TEAM_ID_TO_TEXT.event,
       icon: I.EventIcon,
-      introFirst: "학교 행사를",
-      introSecond: "기획하고 싶다면?",
-    },
-    {
-      team: TEAM_ID_TO_TEXT.safety,
-      icon: I.SafetyIcon,
-      introFirst: "여러 행사에서 학생들의",
-      introSecond: "안전을 지키고 싶다면?",
-    },
-    {
-      team: TEAM_ID_TO_TEXT.account,
-      icon: I.AccountIcon,
-      introFirst: "각종 예산안과 회계록을",
-      introSecond: "작성하고 싶다면?",
-    },
-    {
-      team: TEAM_ID_TO_TEXT.broadcast,
-      icon: I.BoardCastIcon,
-      introFirst: "방송실 기계를 조작하고",
-      introSecond: "방송을 진행하고 싶으면?",
+      description: (
+        <>
+          재미있는 교내 행사를
+          <br />내 손으로 만들어가고 싶다면
+        </>
+      ),
     },
     {
       team: TEAM_ID_TO_TEXT.exercise,
       icon: I.ExerciseIcon,
-      introFirst: "체육대회를 직접",
-      introSecond: "총괄 진행하고 싶으면?",
+      description: (
+        <>
+          교내 체육대회를
+          <br />
+          운영해 보고 싶다면
+        </>
+      ),
     },
     {
       team: TEAM_ID_TO_TEXT.book,
       icon: I.BookIcon,
-      introFirst: "깔끔한 도서관을 위해",
-      introSecond: "관리하고 싶으면?",
+      description: (
+        <>
+          책을 읽는 것을
+          <br />
+          좋아한다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.account,
+      icon: I.AccountIcon,
+      description: (
+        <>
+          문서와 예산을
+          <br />
+          다루고 싶다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.broadcast,
+      icon: I.BoardCastIcon,
+      description: (
+        <>
+          다양한 방송 장비를
+          <br />
+          다뤄보고 싶다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.design,
+      icon: I.DesignIcon,
+      description: (
+        <>
+          학생회의 얼굴을
+          <br />
+          만들고 싶다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.safety,
+      icon: I.SafetyIcon,
+      description: (
+        <>
+          교내 안전을
+          <br />
+          지키고 싶다면
+        </>
+      ),
     },
   ] as IntroDeptSectionProps["IntroList"],
   EVENTS: [
