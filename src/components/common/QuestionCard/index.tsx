@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { QnAIdType } from "src/components/main/QnASection";
+import { TeamId } from "src/constant";
 
 import * as S from "./styled";
 import { Text } from "../Text";
@@ -8,7 +8,7 @@ import { Text } from "../Text";
 export interface QuestionCardProps {
   question: string;
   answer: React.ReactNode[];
-  id: QnAIdType;
+  id: TeamId;
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, id }) => {

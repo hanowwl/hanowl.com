@@ -4,11 +4,12 @@ import { StaticImageData } from "next/image";
 
 import { IntroDeptBox } from "src/components/common";
 import { SectionLayout } from "src/components/layouts";
+import { TEAM_ID_TO_TEXT } from "src/constant";
 
 import * as S from "./styled";
 
 export interface IntroMenuItem {
-  text: string;
+  team: (typeof TEAM_ID_TO_TEXT)[keyof typeof TEAM_ID_TO_TEXT];
   introFirst: string;
   introSecond: string;
   icon: StaticImageData;

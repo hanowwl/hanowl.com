@@ -14,7 +14,7 @@ export const EventSection: React.FC<EventSectionProps> = ({ events }) => {
   return (
     <SectionLayout
       subTitle="학생회 활동"
-      title={`학생회가\n 만들어낸 새로운 모습`}
+      title={`학생회는 오늘도\n 학생의 생활을 책임집니다.`}
       hadFadeInAnimation
       fullWidth
       style={{ maxHeight: "100vh" }}

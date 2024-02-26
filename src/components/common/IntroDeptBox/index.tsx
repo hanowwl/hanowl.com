@@ -10,7 +10,7 @@ export type IntroDeptBoxCustomProps = IntroMenuItem;
 export type IntroDeptBoxProps = IntroDeptBoxCustomProps & React.HTMLAttributes<HTMLDivElement>;
 
 export const IntroDeptBox: React.FC<IntroDeptBoxProps> = ({
-  text,
+  team: text,
   icon,
   introFirst,
   introSecond,

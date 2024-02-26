@@ -5,6 +5,11 @@ export const HanowlSectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 10rem;
+  @media screen and (max-height: 767px) {
+    flex: 1;
+    row-gap: 0;
+    justify-content: space-between;
+  }
 `;
 
 export const HanowlSectionRecordContainer = styled.div`

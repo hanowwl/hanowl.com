@@ -10,7 +10,6 @@ export const SectionLayoutContainer = styled.section`
   justify-content: center;
   row-gap: 6rem;
   @media screen and (max-width: 767px) {
-    justify-content: flex-start;
     padding: 4rem 0;
   }
 `;
