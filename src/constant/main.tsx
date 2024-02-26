@@ -1,6 +1,7 @@
 import { HANOWL_IMAGES } from "src/assets";
 import * as I from "src/assets";
 import { ImageBannerProps } from "src/components/common/ImageBanner";
+import { EventSectionProps } from "src/components/main/EventSection";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
 import { IntroDeptSectionProps } from "src/components/main/IntroDeptSection";
 import { QnASectionProps } from "src/components/main/QnASection";
@@ -110,8 +111,7 @@ export const MAIN_SECTIONS = {
       events: `교내 통합 플랫폼 앱 ‘한움’ 개발`,
       background_img: I.eventPng.Event3Png,
     },
-  ],
-
+  ] as EventSectionProps["events"],
   QUESTIONS: [
     {
       text: "공통 질문",

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export const SectionLayoutContainer = styled.section`
   min-height: 100vh;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;

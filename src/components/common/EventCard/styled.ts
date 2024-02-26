@@ -14,4 +14,8 @@ export const EventCard = styled.div<{ src: StaticImageData }>`
   background-size: cover;
   background-position: center;
   cursor: default;
+  @media screen and (max-width: 767px) {
+    height: 100%;
+    flex-grow: 1;
+  }
 `;
