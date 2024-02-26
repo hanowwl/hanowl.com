@@ -6,3 +6,4 @@ export * from "./ImageBanner";
 export * from "./QnATeamButton";
 export * from "./QuestionCard";
 export * from "./IntroDeptBox";
+export * from "./EventCard";
