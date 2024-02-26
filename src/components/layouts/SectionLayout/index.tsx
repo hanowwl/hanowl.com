@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Text } from "src/components/common";
-import { useFadeInScroll } from "src/components/hooks";
+import { useFadeInScroll } from "src/hooks";
 
 import * as S from "./styled";
 import { Container } from "../Container";

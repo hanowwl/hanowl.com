@@ -2,6 +2,7 @@ import { HANOWL_IMAGES } from "src/assets";
 import * as I from "src/assets";
 import { ImageBannerProps } from "src/components/common/ImageBanner";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
+import { IntroDeptSectionProps } from "src/components/main/IntroDeptSection";
 import { QnASectionProps } from "src/components/main/QnASection";
 
 export const MAIN_SECTIONS = {
@@ -25,7 +26,56 @@ export const MAIN_SECTIONS = {
   ] as HanowlSectionProps["records"],
 
   IMAGES: [HANOWL_IMAGES.slice(0, 5), HANOWL_IMAGES.slice(6)] as ImageBannerProps["imageGroups"],
-
+  INTRO_DEPT: [
+    {
+      text: "기능부",
+      icon: I.TechIcon,
+      introFirst: "교내 소프트웨어를",
+      introSecond: "만들고 싶다면?",
+    },
+    {
+      text: "홍보부",
+      icon: I.DesignIcon,
+      introFirst: "학생회와 관련된 디자인을",
+      introSecond: "하고 싶다면?",
+    },
+    {
+      text: "행사기획부",
+      icon: I.EventIcon,
+      introFirst: "학교 행사를",
+      introSecond: "기획하고 싶다면?",
+    },
+    {
+      text: "안전부",
+      icon: I.SafetyIcon,
+      introFirst: "여러 행사에서 학생들의",
+      introSecond: "안전을 지키고 싶다면?",
+    },
+    {
+      text: "총무부",
+      icon: I.AccountIcon,
+      introFirst: "각종 예산안과 회계록을",
+      introSecond: "작성하고 싶다면?",
+    },
+    {
+      text: "방송부",
+      icon: I.BoardCastIcon,
+      introFirst: "방송실 기계를 조작하고",
+      introSecond: "방송을 진행하고 싶으면?",
+    },
+    {
+      text: "학예체육부",
+      icon: I.ExerciseIcon,
+      introFirst: "체육대회를 직접",
+      introSecond: "총괄 진행하고 싶으면?",
+    },
+    {
+      text: "도서부",
+      icon: I.BookIcon,
+      introFirst: "깔끔한 도서관을 위해",
+      introSecond: "관리하고 싶으면?",
+    },
+  ] as IntroDeptSectionProps["IntroList"],
   EVENTS: [
     {
       title: [
