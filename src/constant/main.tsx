@@ -3,8 +3,8 @@ import * as I from "src/assets";
 import { ImageBannerProps } from "src/components/common/ImageBanner";
 import { EventSectionProps } from "src/components/main/EventSection";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
-import { TeamsSectionProps } from "src/components/main/TeamsSection";
 import { QnASectionProps } from "src/components/main/QnASection";
+import { TeamsSectionProps } from "src/components/main/TeamsSection";
 
 import { TEAM_ID_TO_TEXT } from "./teams";
 
@@ -29,7 +29,7 @@ export const MAIN_SECTIONS = {
   ] as HanowlSectionProps["records"],
 
   IMAGES: [HANOWL_IMAGES.slice(0, 5), HANOWL_IMAGES.slice(6)] as ImageBannerProps["imageGroups"],
-  INTRO_DEPT: [
+  TEAMS_LIST: [
     {
       team: TEAM_ID_TO_TEXT.tech,
       icon: I.TechIcon,
@@ -117,7 +117,7 @@ export const MAIN_SECTIONS = {
         </>
       ),
     },
-  ] as TeamsSectionProps["IntroList"],
+  ] as TeamsSectionProps["teams"],
   EVENTS: [
     {
       title: [

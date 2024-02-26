@@ -2,10 +2,15 @@ import { useEffect, useRef, useState } from "react";
 
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
+import { useQueryParams } from "src/hooks";
+import { useCheckAppStore } from "src/store";
 
 import * as S from "./styled";
 
 export default function Home() {
+  const { isApp } = useQueryParams<{ isApp: boolean }>();
+  const { setIsApp } = useCheckAppStore();
+
   const [isEnd, setIsEnd] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -33,12 +38,18 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isApp !== undefined) {
+      setIsApp(isApp);
+    }
+  }, [isApp, setIsApp]);
+
   return (
     <S.MainPageContainer isEnd={isEnd} ref={containerRef}>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
       <Main.EventSection events={MAIN_SECTIONS.EVENTS} />
-      <Main.IntroDeptSection teams={MAIN_SECTIONS.INTRO_DEPT} />
+      <Main.IntroDeptSection teams={MAIN_SECTIONS.TEAMS_LIST} />
       <Main.QnASection qnaList={MAIN_SECTIONS.QUESTIONS} />
     </S.MainPageContainer>
   );

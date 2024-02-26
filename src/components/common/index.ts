@@ -5,5 +5,5 @@ export * from "./Counter";
 export * from "./ImageBanner";
 export * from "./QnATeamButton";
 export * from "./QuestionCard";
-export * from "./TeamIntroduceBox";
+export * from "./TeamBox";
 export * from "./EventCard";

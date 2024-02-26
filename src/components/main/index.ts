@@ -1,8 +1,8 @@
 import { EventSection } from "./EventSection";
 import { HanowlSection } from "./HanowlSection";
-import { TeamsSection } from "./TeamsSection";
 import { MainSection } from "./MainSection";
 import { QnASection } from "./QnASection";
+import { TeamsSection } from "./TeamsSection";
 
 export const Main = Object.assign(
   {},
