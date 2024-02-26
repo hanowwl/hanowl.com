@@ -2,10 +2,9 @@ import React, { useMemo, useState } from "react";
 
 import { StaticImageData } from "next/image";
 
-import { QnATeamButton } from "src/components/common";
-import { QuestionCard, QuestionCardProps } from "src/components/common/QuestionCard";
-import { useFadeInScroll } from "src/components/hooks";
+import { QnATeamButton, QuestionCard, QuestionCardProps } from "src/components/common";
 import { SectionLayout } from "src/components/layouts";
+import { useFadeInScroll } from "src/hooks";
 
 import * as S from "./styled";
 

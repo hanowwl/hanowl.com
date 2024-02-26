@@ -1,10 +1,9 @@
 import React from "react";
-import * as I from "src/assets";
 
+import * as I from "src/assets";
 import { IntroMenuItem } from "src/components/main/IntroDeptSection";
 
 import * as S from "./styled";
-import { Text } from "../Text";
 
 export type IntroDeptBoxCustomProps = IntroMenuItem;
 
@@ -15,19 +14,18 @@ export const IntroDeptBox: React.FC<IntroDeptBoxProps> = ({
   icon,
   introFirst,
   introSecond,
+  ...props
 }) => {
   return (
-    <S.IntroDeptBox>
-      <S.IntroDeptsecondbox>
-        <S.IntroTeamIcon src={icon} alt={text} quality={100} />
-        <Text size={1.2}>{text}</Text>
-        <Text size={1.8} weight={600}>
-          {introFirst}
-          <br />
-          {introSecond}
-          <S.ArrowIcon src={I.arrow} alt={text} quality={100} />
-        </Text>
-      </S.IntroDeptsecondbox>
-    </S.IntroDeptBox>
+    <S.IntroDeptBoxContainer {...props}>
+      <S.IntroTeamIcon src={icon} alt={text} quality={100} />
+      <S.IntroDeptBoxTeam>{text}</S.IntroDeptBoxTeam>
+      <S.IntroDeptBoxTitle>
+        {introFirst}
+        <br />
+        {introSecond}
+        <S.IntroDeptBoxArrowIcon src={I.arrow} alt={text} quality={100} />
+      </S.IntroDeptBoxTitle>
+    </S.IntroDeptBoxContainer>
   );
 };

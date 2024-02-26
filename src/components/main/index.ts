@@ -1,6 +1,10 @@
+import { EventSection } from "./EventSection";
 import { HanowlSection } from "./HanowlSection";
+import { IntroDeptSection } from "./IntroDeptSection";
 import { MainSection } from "./MainSection";
 import { QnASection } from "./QnASection";
-import { IntroDeptSection } from "./IntroDeptSection";
 
-export const Main = Object.assign({}, { MainSection, HanowlSection, QnASection, IntroDeptSection });
+export const Main = Object.assign(
+  {},
+  { MainSection, HanowlSection, QnASection, IntroDeptSection, EventSection },
+);

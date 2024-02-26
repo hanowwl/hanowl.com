@@ -8,9 +8,9 @@ export const SectionLayoutContainer = styled.section`
   align-items: flex-start;
   justify-content: center;
   row-gap: 6rem;
-  padding: 16rem 0;
   @media screen and (max-width: 767px) {
-    padding-bottom: 10rem;
+    justify-content: flex-start;
+    padding: 4rem 0;
   }
 `;
 

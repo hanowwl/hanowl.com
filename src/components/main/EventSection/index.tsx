@@ -1,5 +1,5 @@
 import { EventCard } from "src/components/common";
-import { useFadeInScroll } from "src/components/hooks";
+import { useFadeInScroll } from "src/hooks";
 import { SectionLayout } from "src/components/layouts";
 import { MAIN_SECTIONS } from "src/constant/main";
 

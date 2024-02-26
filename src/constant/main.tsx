@@ -2,8 +2,8 @@ import { HANOWL_IMAGES } from "src/assets";
 import * as I from "src/assets";
 import { ImageBannerProps } from "src/components/common/ImageBanner";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
-import { QnASectionProps } from "src/components/main/QnASection";
 import { IntroDeptSectionProps } from "src/components/main/IntroDeptSection";
+import { QnASectionProps } from "src/components/main/QnASection";
 
 export const MAIN_SECTIONS = {
   HANOWL_RECORDS: [
