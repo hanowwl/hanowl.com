@@ -11,7 +11,6 @@ export interface SectionLayoutCustomProps {
   title: string;
   children: React.ReactNode;
   fullWidth?: boolean;
-  hadFadeInAnimation?: boolean;
 }
 
 export type SectionLayoutProps = SectionLayoutCustomProps & React.HTMLAttributes<HTMLElement>;
@@ -21,7 +20,6 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
   subTitle,
   title,
   fullWidth,
-  hadFadeInAnimation,
   ...props
 }) => {
   const { fadeInScroll } = useFadeInScroll();
@@ -29,7 +27,7 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
   return (
     <S.SectionLayoutContainer {...props}>
       <Container>
-        <S.SectionLayoutTitleContainer {...(hadFadeInAnimation && fadeInScroll({ delay: 0 }))}>
+        <S.SectionLayoutTitleContainer {...fadeInScroll({ delay: 0 })}>
           <Text size={1.8}>{subTitle}</Text>
           {title.includes("\n") ? (
             title.split("\n").map((text, index) => (

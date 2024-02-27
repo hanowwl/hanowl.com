@@ -8,8 +8,8 @@ import { Text } from "../Text";
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const onTitleClick = () => {
-    router.push("/");
     window.scrollTo({ top: 0, behavior: "smooth" });
+    router.push("/");
   };
 
   return (

@@ -11,11 +11,7 @@ export interface TeamsSectionProps {
 
 export const TeamsSection: React.FC<TeamsSectionProps> = ({ teams }) => {
   return (
-    <SectionLayout
-      subTitle="부서 소개"
-      title={`여러분의 재능을 펼칠 부서,\n소개합니다.`}
-      hadFadeInAnimation
-    >
+    <SectionLayout subTitle="부서 소개" title={`여러분의 재능을 펼칠 부서,\n소개합니다.`}>
       <S.TeamsSectionContainer>
         {teams.map((props, index) => (
           <TeamBox key={index} {...props} />

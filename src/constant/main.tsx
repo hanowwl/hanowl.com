@@ -120,35 +120,35 @@ export const MAIN_SECTIONS = {
   ] as TeamsSectionProps["teams"],
   EVENTS: [
     {
-      title: [
+      title: (
         <>
           참가자들의
           <br />
           열정을 북돋습니다
-        </>,
-      ],
+        </>
+      ),
       events: `한세톤 운영`,
       background_img: I.eventPng.Event1Png,
     },
     {
-      title: [
+      title: (
         <>
           즐거운 축제를
           <br />
           더욱 즐겁게 만듭니다
-        </>,
-      ],
+        </>
+      ),
       events: `한세어울림한마당 운영`,
       background_img: I.eventPng.Event2Png,
     },
     {
-      title: [
+      title: (
         <>
           학생들의
           <br />
           생활을 편리하게 만듭니다
-        </>,
-      ],
+        </>
+      ),
       events: `교내 통합 플랫폼 앱 ‘한움’ 개발`,
       background_img: I.eventPng.Event3Png,
     },

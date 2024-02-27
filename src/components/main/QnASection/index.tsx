@@ -34,7 +34,8 @@ export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
     <SectionLayout
       subTitle="자주 묻는 질문"
       title={`학생회에 대해\n궁금한 점이 있으신가요?`}
-      hadFadeInAnimation
+      fullWidth
+      style={{ height: "100vh", overflow: "hidden", flex: 1 }}
     >
       <S.QnASectionContainer>
         <S.QnASectionTeamContainer {...fadeInScroll({ delay: 0.2 })}>
@@ -53,6 +54,10 @@ export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
             questions.list.map((props, index) => (
               <QuestionCard key={index} {...props} id={isSelected} />
             ))}
+          {/* {questions &&
+            questions.list.map((props, index) => (
+              <QuestionCard key={index} {...props} id={isSelected} />
+            ))} */}
         </S.QnASectionCardContainer>
       </S.QnASectionContainer>
     </SectionLayout>

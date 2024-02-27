@@ -5,11 +5,12 @@ import { MAIN_SECTIONS } from "src/constant";
 import { useQueryParams } from "src/hooks";
 import { useCheckAppStore } from "src/store";
 
+import { linkBridge } from "@webview-bridge/web";
+
 import * as S from "./styled";
 
 export default function Home() {
-  const { isApp } = useQueryParams<{ isApp: boolean }>();
-  const { setIsApp } = useCheckAppStore();
+  const { setIsApp, isApp } = useCheckAppStore();
 
   const [isEnd, setIsEnd] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
@@ -30,19 +31,10 @@ export default function Home() {
     if (container) {
       container.addEventListener("scroll", handleScroll, { passive: false });
     }
-
     return () => {
-      if (container) {
-        container.removeEventListener("scroll", handleScroll);
-      }
+      container && container.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    if (isApp !== undefined) {
-      setIsApp(isApp);
-    }
-  }, [isApp, setIsApp]);
 
   return (
     <S.MainPageContainer isEnd={isEnd} ref={containerRef}>

@@ -9,9 +9,8 @@ export const SectionLayoutContainer = styled.section`
   align-items: flex-start;
   justify-content: center;
   row-gap: 6rem;
-  @media screen and (max-width: 767px) {
-    padding: 4rem 0;
-  }
+  padding-top: 10rem;
+  padding-bottom: 4rem;
 `;
 
 export const SectionLayoutTitleContainer = styled(motion.div)`

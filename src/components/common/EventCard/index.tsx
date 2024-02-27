@@ -4,7 +4,7 @@ import * as S from "./styled";
 import { Text } from "../Text";
 
 export interface EventCardProps {
-  title: React.ReactNode[];
+  title: React.ReactNode;
   events: string;
   background_img: StaticImageData;
 }

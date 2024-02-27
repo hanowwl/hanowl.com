@@ -3,7 +3,8 @@ import { colors } from "src/styles";
 import styled from "@emotion/styled";
 
 export const TeamContainer = styled.div`
-  padding: 10rem 1.5rem 4rem 1.5rem;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
 `;
 
 export const TeamTitleContainer = styled.div`
