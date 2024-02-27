@@ -26,7 +26,7 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
       <Text size={1.8}>{team}</Text>
       <Text size={2.4} weight={700}>
         {description}
-        <S.TeamBoxLinkIcon src={I.arrow} alt={team} quality={100} />
+        <S.TeamBoxLinkIcon src={I.ArrowIcon} alt={team} quality={100} />
       </Text>
     </S.TeamBox>
   );

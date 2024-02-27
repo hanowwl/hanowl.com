@@ -1,41 +1,24 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
+import { useCheckAppStore } from "src/store";
 
 import * as S from "./styled";
 
 export default function Home() {
-  const [isEnd, setIsEnd] = useState(false);
+  const { isApp } = useCheckAppStore();
+
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const container = containerRef.current;
-      if (!container) return;
-
-      if (container.scrollHeight - container.scrollTop === container.clientHeight) {
-        setIsEnd(true);
-      } else {
-        setIsEnd(false);
-      }
-    };
-
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(null);
     }
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScroll, { passive: false });
-    }
-    return () => {
-      container && container.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
-    <S.MainPageContainer isEnd={isEnd} ref={containerRef}>
+    <S.MainPageContainer isApp={isApp} ref={containerRef}>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
       <Main.EventSection events={MAIN_SECTIONS.EVENTS} />
