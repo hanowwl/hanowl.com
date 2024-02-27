@@ -7,6 +7,7 @@ import { Text } from "../Text";
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
+
   const onTitleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     router.push("/");

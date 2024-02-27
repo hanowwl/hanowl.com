@@ -40,3 +40,10 @@ export const SectionListUl = styled.ul`
   margin-left: 2rem;
   list-style: inside !important;
 `;
+
+export const SectionListItem = styled.li`
+  color: ${colors.gray};
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+`;

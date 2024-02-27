@@ -23,6 +23,18 @@ export const TEAM_ID_TO_TEXT: { [key in TeamId]: string } = {
   broadcast: "방송부",
 };
 
+export const TEAM_TEXT_TO_ID: { [key: string]: TeamId } = {
+  공통: "common",
+  기능부: "tech",
+  홍보부: "design",
+  행사기획부: "event",
+  안전부: "safety",
+  총무부: "account",
+  학예체육부: "exercise",
+  도서부: "book",
+  방송부: "broadcast",
+};
+
 export interface TeamSection {
   title: string;
   text?: React.ReactNode;

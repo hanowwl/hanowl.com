@@ -2,16 +2,10 @@ import { useEffect, useRef, useState } from "react";
 
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
-import { useQueryParams } from "src/hooks";
-import { useCheckAppStore } from "src/store";
-
-import { linkBridge } from "@webview-bridge/web";
 
 import * as S from "./styled";
 
 export default function Home() {
-  const { setIsApp, isApp } = useCheckAppStore();
-
   const [isEnd, setIsEnd] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -26,6 +20,10 @@ export default function Home() {
         setIsEnd(false);
       }
     };
+
+    if (window.ReactNativeWebView) {
+      window.ReactNativeWebView.postMessage(null);
+    }
 
     const container = containerRef.current;
     if (container) {

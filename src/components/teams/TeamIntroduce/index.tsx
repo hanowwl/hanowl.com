@@ -1,8 +1,6 @@
 import React from "react";
 
-import { Text } from "src/components/common";
 import { TeamSection } from "src/constant";
-import { colors } from "src/styles";
 
 import * as S from "./styled";
 
@@ -22,9 +20,7 @@ export const TeamIntroduce: React.FC<TeamIntroduceProps> = ({ sections }) => {
             {list && (
               <S.SectionListUl>
                 {list.map((item, i) => (
-                  <Text size={1.6} key={i} color={colors.gray}>
-                    {item}
-                  </Text>
+                  <S.SectionListItem key={i}>{item}</S.SectionListItem>
                 ))}
               </S.SectionListUl>
             )}
