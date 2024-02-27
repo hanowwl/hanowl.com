@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { Navbar } from "src/components/common";
+import { BottomBox, Navbar } from "src/components/common";
 import { useCheckAppStore } from "src/store";
 
 export interface AppLayoutProps {
@@ -22,6 +22,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
     <>
       {!isApp && <Navbar />}
       {children}
+      {!isApp && <BottomBox />}
     </>
   );
 };
