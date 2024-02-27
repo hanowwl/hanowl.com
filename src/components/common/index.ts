@@ -1,4 +1,3 @@
-export * from "./Navbar";
 export * from "./Text";
 export * from "./RecordCard";
 export * from "./Counter";
@@ -7,4 +6,3 @@ export * from "./QnATeamButton";
 export * from "./QuestionCard";
 export * from "./TeamBox";
 export * from "./EventCard";
-export * from "./BottomBox";

@@ -20,9 +20,9 @@ export const QnASectionTeamContainer = styled(motion.div)`
   }
 `;
 
-export const QnASectionCardContainer = styled(motion.div)<{ isApp: boolean }>`
+export const QnASectionCardContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  margin-bottom: ${({ isApp }) => isApp && "2rem"};
+  margin-bottom: 2rem;
 `;

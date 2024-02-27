@@ -2,13 +2,10 @@ import { useEffect, useRef } from "react";
 
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
-import { useCheckAppStore } from "src/store";
 
 import * as S from "./styled";
 
 export default function Home() {
-  const { isApp } = useCheckAppStore();
-
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -18,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <S.MainPageContainer isApp={isApp} ref={containerRef}>
+    <S.MainPageContainer ref={containerRef}>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
       <Main.EventSection events={MAIN_SECTIONS.EVENTS} />
