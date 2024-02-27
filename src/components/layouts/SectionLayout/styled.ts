@@ -11,6 +11,9 @@ export const SectionLayoutContainer = styled.section`
   row-gap: 6rem;
   padding-top: 10rem;
   padding-bottom: 4rem;
+  @media screen and (max-width: 767px) {
+    row-gap: 3rem;
+  }
 `;
 
 export const SectionLayoutTitleContainer = styled(motion.div)`

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export const QnASectionContainer = styled(Container)`
   display: flex;
   flex-direction: column;
-  row-gap: 6rem;
+  row-gap: 3rem;
   flex-grow: 0.8;
   overflow: scroll;
 `;
@@ -20,9 +20,9 @@ export const QnASectionTeamContainer = styled(motion.div)`
   }
 `;
 
-export const QnASectionCardContainer = styled(motion.div)`
+export const QnASectionCardContainer = styled(motion.div)<{ isApp: boolean }>`
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: ${({ isApp }) => isApp && "2rem"};
 `;

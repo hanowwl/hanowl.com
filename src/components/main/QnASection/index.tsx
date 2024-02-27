@@ -6,6 +6,7 @@ import { QnATeamButton, QuestionCard, QuestionCardProps } from "src/components/c
 import { SectionLayout } from "src/components/layouts";
 import { TEAM_ID_TO_TEXT, TeamId } from "src/constant";
 import { useFadeInScroll } from "src/hooks";
+import { useCheckAppStore } from "src/store";
 
 import * as S from "./styled";
 
@@ -21,6 +22,7 @@ export interface QnASectionProps {
 }
 
 export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
+  const { isApp } = useCheckAppStore();
   const { fadeInScroll } = useFadeInScroll();
 
   const [isSelected, setIsSelected] = useState<TeamId>(qnaList[0].id);
@@ -49,15 +51,11 @@ export const QnASection: React.FC<QnASectionProps> = ({ qnaList }) => {
             />
           ))}
         </S.QnASectionTeamContainer>
-        <S.QnASectionCardContainer {...fadeInScroll({ delay: 0.4 })}>
+        <S.QnASectionCardContainer {...fadeInScroll({ delay: 0.4 })} isApp={isApp}>
           {questions &&
             questions.list.map((props, index) => (
               <QuestionCard key={index} {...props} id={isSelected} />
             ))}
-          {/* {questions &&
-            questions.list.map((props, index) => (
-              <QuestionCard key={index} {...props} id={isSelected} />
-            ))} */}
         </S.QnASectionCardContainer>
       </S.QnASectionContainer>
     </SectionLayout>

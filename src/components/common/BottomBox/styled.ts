@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-export const BottomBoxWrapper = styled.div<{ isClosed: boolean }>`
+export const BottomBoxWrapper = styled(motion.div)`
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -10,8 +11,6 @@ export const BottomBoxWrapper = styled.div<{ isClosed: boolean }>`
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  opacity: ${({ isClosed }) => (isClosed ? 0 : 1)};
-  transition: opacity 200ms;
 
   @media screen and (max-width: 768px) {
     left: 0;

@@ -7,6 +7,8 @@ import { useRouter } from "next/router";
 import { HanumPng } from "src/assets";
 import { useRedirectApp } from "src/hooks";
 
+import { AnimatePresence } from "framer-motion";
+
 import * as S from "./styled";
 
 export interface CloseIconProps extends SVGProps<SVGSVGElement> {}
@@ -43,20 +45,24 @@ export const BottomBox: React.FC = () => {
 
   if (router.pathname === "/poster" || router.pathname === "/apply") return null;
   return (
-    <S.BottomBoxWrapper isClosed={isClosed}>
-      <S.BottomBoxContainer>
-        <S.BottomBoxContentContainer onClick={onBoxClick}>
-          <Image src={HanumPng} alt="한움" quality={100} />
-          <S.BottomBoxTextContainer>
-            <S.BottomBoxBoldText>학생회에 관심이 있으신가요?</S.BottomBoxBoldText>
-            <S.BottomBoxText>
-              교내 통합 플랫폼 한움에서
-              <br />더 많은 정보를 확인하고 지원해보세요!
-            </S.BottomBoxText>
-          </S.BottomBoxTextContainer>
-        </S.BottomBoxContentContainer>
-        <CloseIcon onClick={onCloseBoxClick} />
-      </S.BottomBoxContainer>
-    </S.BottomBoxWrapper>
+    <AnimatePresence>
+      {!isClosed && (
+        <S.BottomBoxWrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+          <S.BottomBoxContainer>
+            <S.BottomBoxContentContainer onClick={onBoxClick}>
+              <Image src={HanumPng} alt="한움" quality={100} />
+              <S.BottomBoxTextContainer>
+                <S.BottomBoxBoldText>학생회에 관심이 있으신가요?</S.BottomBoxBoldText>
+                <S.BottomBoxText>
+                  교내 통합 플랫폼 한움에서
+                  <br />더 많은 정보를 확인하고 지원해보세요!
+                </S.BottomBoxText>
+              </S.BottomBoxTextContainer>
+            </S.BottomBoxContentContainer>
+            <CloseIcon onClick={onCloseBoxClick} />
+          </S.BottomBoxContainer>
+        </S.BottomBoxWrapper>
+      )}
+    </AnimatePresence>
   );
 };
