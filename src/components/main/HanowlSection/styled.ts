@@ -7,7 +7,7 @@ export const HanowlSectionContainer = styled.div`
   row-gap: 10rem;
   @media screen and (max-height: 767px) {
     flex: 1;
-    row-gap: 0;
+    row-gap: 4rem;
     justify-content: space-between;
   }
 `;
