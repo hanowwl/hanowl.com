@@ -27,7 +27,7 @@ export const useRedirectApp = () => {
 
     const timer = setTimeout(function () {
       redirectStore();
-    }, 2000);
+    }, 8000);
   };
 
   const redirectStore = () => {
