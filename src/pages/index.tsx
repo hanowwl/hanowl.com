@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
@@ -6,39 +6,20 @@ import { MAIN_SECTIONS } from "src/constant";
 import * as S from "./styled";
 
 export default function Home() {
-  const [isEnd, setIsEnd] = useState(false);
   const containerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const container = containerRef.current;
-      if (!container) return;
-
-      if (container.scrollHeight - container.scrollTop === container.clientHeight) {
-        setIsEnd(true);
-      } else {
-        setIsEnd(false);
-      }
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("scroll", handleScroll, { passive: false });
+    if (window.ReactNativeWebView) {
+      window.ReactNativeWebView.postMessage(null);
     }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("scroll", handleScroll);
-      }
-    };
   }, []);
 
   return (
-    <S.MainPageContainer isEnd={isEnd} ref={containerRef}>
+    <S.MainPageContainer ref={containerRef}>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
-      <Main.IntroDeptSection IntroList={MAIN_SECTIONS.INTRO_DEPT} />
-      <Main.EventSection />
+      <Main.EventSection events={MAIN_SECTIONS.EVENTS} />
+      <Main.IntroDeptSection teams={MAIN_SECTIONS.TEAMS_LIST} />
       <Main.QnASection qnaList={MAIN_SECTIONS.QUESTIONS} />
     </S.MainPageContainer>
   );

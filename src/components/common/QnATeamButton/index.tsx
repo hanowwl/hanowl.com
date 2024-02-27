@@ -12,7 +12,7 @@ export type QnATeamButtonCustomProps = Omit<QnAMenuItem, "list" | "id"> & {
 export type QnATeamButtonProps = QnATeamButtonCustomProps & React.HTMLAttributes<HTMLDivElement>;
 
 export const QnATeamButton: React.FC<QnATeamButtonProps> = ({
-  text,
+  team: text,
   icon,
   isSelected,
   ...props

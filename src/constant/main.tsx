@@ -1,9 +1,12 @@
 import { HANOWL_IMAGES } from "src/assets";
 import * as I from "src/assets";
 import { ImageBannerProps } from "src/components/common/ImageBanner";
+import { EventSectionProps } from "src/components/main/EventSection";
 import { HanowlSectionProps } from "src/components/main/HanowlSection";
-import { IntroDeptSectionProps } from "src/components/main/IntroDeptSection";
 import { QnASectionProps } from "src/components/main/QnASection";
+import { TeamsSectionProps } from "src/components/main/TeamsSection";
+
+import { TEAM_ID_TO_TEXT } from "./teams";
 
 export const MAIN_SECTIONS = {
   HANOWL_RECORDS: [
@@ -26,95 +29,133 @@ export const MAIN_SECTIONS = {
   ] as HanowlSectionProps["records"],
 
   IMAGES: [HANOWL_IMAGES.slice(0, 5), HANOWL_IMAGES.slice(6)] as ImageBannerProps["imageGroups"],
-  INTRO_DEPT: [
+  TEAMS_LIST: [
     {
-      text: "기능부",
+      team: TEAM_ID_TO_TEXT.tech,
       icon: I.TechIcon,
-      introFirst: "교내 소프트웨어를",
-      introSecond: "만들고 싶다면?",
+      description: (
+        <>
+          교내 소프트웨어를
+          <br />
+          만들어 보고 싶다면
+        </>
+      ),
     },
     {
-      text: "홍보부",
-      icon: I.DesignIcon,
-      introFirst: "학생회와 관련된 디자인을",
-      introSecond: "하고 싶다면?",
-    },
-    {
-      text: "행사기획부",
+      team: TEAM_ID_TO_TEXT.event,
       icon: I.EventIcon,
-      introFirst: "학교 행사를",
-      introSecond: "기획하고 싶다면?",
+      description: (
+        <>
+          재미있는 교내 행사를
+          <br />내 손으로 만들어가고 싶다면
+        </>
+      ),
     },
     {
-      text: "안전부",
-      icon: I.SafetyIcon,
-      introFirst: "여러 행사에서 학생들의",
-      introSecond: "안전을 지키고 싶다면?",
-    },
-    {
-      text: "총무부",
-      icon: I.AccountIcon,
-      introFirst: "각종 예산안과 회계록을",
-      introSecond: "작성하고 싶다면?",
-    },
-    {
-      text: "방송부",
-      icon: I.BoardCastIcon,
-      introFirst: "방송실 기계를 조작하고",
-      introSecond: "방송을 진행하고 싶으면?",
-    },
-    {
-      text: "학예체육부",
+      team: TEAM_ID_TO_TEXT.exercise,
       icon: I.ExerciseIcon,
-      introFirst: "체육대회를 직접",
-      introSecond: "총괄 진행하고 싶으면?",
+      description: (
+        <>
+          교내 체육대회를
+          <br />
+          운영해 보고 싶다면
+        </>
+      ),
     },
     {
-      text: "도서부",
+      team: TEAM_ID_TO_TEXT.book,
       icon: I.BookIcon,
-      introFirst: "깔끔한 도서관을 위해",
-      introSecond: "관리하고 싶으면?",
+      description: (
+        <>
+          책을 읽는 것을
+          <br />
+          좋아한다면
+        </>
+      ),
     },
-  ] as IntroDeptSectionProps["IntroList"],
+    {
+      team: TEAM_ID_TO_TEXT.account,
+      icon: I.AccountIcon,
+      description: (
+        <>
+          문서와 예산을
+          <br />
+          다루고 싶다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.broadcast,
+      icon: I.BoardCastIcon,
+      description: (
+        <>
+          다양한 방송 장비를
+          <br />
+          다뤄보고 싶다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.design,
+      icon: I.DesignIcon,
+      description: (
+        <>
+          학생회의 얼굴을
+          <br />
+          만들고 싶다면
+        </>
+      ),
+    },
+    {
+      team: TEAM_ID_TO_TEXT.safety,
+      icon: I.SafetyIcon,
+      description: (
+        <>
+          교내 안전을
+          <br />
+          지키고 싶다면
+        </>
+      ),
+    },
+  ] as TeamsSectionProps["teams"],
   EVENTS: [
     {
-      title: [
+      title: (
         <>
           참가자들의
           <br />
           열정을 북돋습니다
-        </>,
-      ],
+        </>
+      ),
       events: `한세톤 운영`,
       background_img: I.eventPng.Event1Png,
     },
     {
-      title: [
+      title: (
         <>
           즐거운 축제를
           <br />
           더욱 즐겁게 만듭니다
-        </>,
-      ],
+        </>
+      ),
       events: `한세어울림한마당 운영`,
       background_img: I.eventPng.Event2Png,
     },
     {
-      title: [
+      title: (
         <>
           학생들의
           <br />
           생활을 편리하게 만듭니다
-        </>,
-      ],
+        </>
+      ),
       events: `교내 통합 플랫폼 앱 ‘한움’ 개발`,
       background_img: I.eventPng.Event3Png,
     },
-  ],
-
+  ] as EventSectionProps["events"],
   QUESTIONS: [
     {
-      text: "공통 질문",
+      team: `${TEAM_ID_TO_TEXT.common} 질문`,
       id: "common",
       icon: I.CommonIcon,
       list: [
@@ -137,7 +178,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "기능부",
+      team: TEAM_ID_TO_TEXT.tech,
       id: "tech",
       icon: I.TechIcon,
       list: [
@@ -232,7 +273,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "홍보부",
+      team: TEAM_ID_TO_TEXT.design,
       id: "design",
       icon: I.DesignIcon,
       list: [
@@ -249,7 +290,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "행사기획부",
+      team: TEAM_ID_TO_TEXT.event,
       id: "event",
       icon: I.EventIcon,
       list: [
@@ -264,7 +305,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "안전부",
+      team: TEAM_ID_TO_TEXT.safety,
       id: "safety",
       icon: I.SafetyIcon,
       list: [
@@ -282,7 +323,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "총무부",
+      team: TEAM_ID_TO_TEXT.account,
       id: "account",
       icon: I.AccountIcon,
       list: [
@@ -299,7 +340,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "방송부",
+      team: TEAM_ID_TO_TEXT.broadcast,
       id: "broadcast",
       icon: I.BoardCastIcon,
       list: [
@@ -310,7 +351,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "학예체육부",
+      team: TEAM_ID_TO_TEXT.exercise,
       id: "exercise",
       icon: I.ExerciseIcon,
       list: [
@@ -325,7 +366,7 @@ export const MAIN_SECTIONS = {
       ],
     },
     {
-      text: "도서부",
+      team: TEAM_ID_TO_TEXT.book,
       id: "book",
       icon: I.BookIcon,
       list: [

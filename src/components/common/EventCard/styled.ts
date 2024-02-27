@@ -9,9 +9,14 @@ export const EventCard = styled.div<{ src: StaticImageData }>`
   flex-direction: column;
   border-radius: 2rem;
   padding: 1.4rem 2rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(${({ src }) => src.src});
   background-size: cover;
   background-position: center;
   cursor: default;
+  row-gap: 0.3rem;
+  @media screen and (max-width: 767px) {
+    height: 100%;
+    flex-grow: 1;
+  }
 `;

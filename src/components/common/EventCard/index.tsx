@@ -4,7 +4,7 @@ import * as S from "./styled";
 import { Text } from "../Text";
 
 export interface EventCardProps {
-  title: React.ReactNode[];
+  title: React.ReactNode;
   events: string;
   background_img: StaticImageData;
 }
@@ -15,7 +15,6 @@ export const EventCard: React.FC<EventCardProps> = ({ title, events, background_
       <Text size={2.8} weight={600}>
         {title}
       </Text>
-      <br />
       <Text size={1.8} weight={300}>
         {events}
       </Text>
