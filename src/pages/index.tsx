@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import { Main } from "src/components/main";
 import { MAIN_SECTIONS } from "src/constant";
@@ -9,8 +9,6 @@ import * as S from "./styled";
 export default function Home() {
   const { isApp } = useCheckAppStore();
 
-  const containerRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
     if (window.ReactNativeWebView) {
       window.ReactNativeWebView.postMessage(null);
@@ -18,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <S.MainPageContainer isApp={isApp} ref={containerRef}>
+    <S.MainPageContainer isApp={isApp}>
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
       <Main.EventSection events={MAIN_SECTIONS.EVENTS} />

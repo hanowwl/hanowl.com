@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
 export const SectionLayoutContainer = styled.section`
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex: 1;
   flex-direction: column;

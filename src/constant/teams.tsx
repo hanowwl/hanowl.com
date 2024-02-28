@@ -310,15 +310,15 @@ export const TEAM_LIST: TeamItem[] = [
           <>
             홍보부에서는 여러분의 창의력을 확인하기 위해 과제를 제출 받고 있어요
             <br />
-            홍보부 과제는 홍보부를 소개하는 내용을 담고 있는 뉴스카드를 만들고 제출하는 거랍니다
+            홍보부 과제는 체육대회를 홍보하는 내용을 담고 있는 포스터를 만들고 제출하는 거랍니다
             <br />
             과제 진행 전, 아래 조건들을 꼭 지켜서 만들어주세요
             <br />
             <br />
             <ol start={1} style={{ listStyle: "decimal" }}>
-              <li style={{ marginLeft: "2rem" }}>뉴스카드 사이즈는 1080px x 1080px이에요</li>
+              <li style={{ marginLeft: "2rem" }}>포스터 사이즈는 1080px x 1080px이에요</li>
               <li style={{ marginLeft: "2rem" }}>
-                뉴스카드 안에 {"홍보부"}라는 글자가 꼭 들어가야해요
+                뉴스카드 안에 {"교내스포츠한마당"}이라는 글자가 꼭 들어가야해요
               </li>
             </ol>
           </>
