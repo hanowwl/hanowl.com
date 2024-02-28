@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { colors } from "./colors";
 import { reset } from "./reset";
 
-export const globalStyle = () => css`
+export const globalStyle = (bgColor: string) => css`
   ${reset}
 
   * {
@@ -26,7 +26,7 @@ export const globalStyle = () => css`
 
   body {
     color: ${colors.text};
-    background-color: ${colors.background};
+    background-color: ${bgColor};
   }
 
   ::-webkit-scrollbar {

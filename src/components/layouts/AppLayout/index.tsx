@@ -14,14 +14,12 @@ export interface AppLayoutProps {
 
 export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   const { setIsLoading, isLoading } = useCheckAppStore();
-  const { setIsApp, isApp } = useCheckAppStore();
+  const { isApp } = useCheckAppStore();
 
   useEffect(() => {
     if (window && window.isNativeApp) {
       setIsLoading(false);
-      setIsApp(Boolean(window.isNativeApp));
     } else {
-      setIsApp(false);
       setIsLoading(false);
     }
   }, [isApp]);

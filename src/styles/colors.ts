@@ -5,4 +5,5 @@ export const colors = {
   qnaCard: "#1E1E1E",
   text: "#eeeeee",
   gray: "#A3A3A3",
+  appBackground: "#2A2B2E",
 };

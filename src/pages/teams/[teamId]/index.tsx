@@ -29,7 +29,7 @@ export default function TeamPage() {
   }, [teamId]);
 
   return (
-    <S.TeamContainer>
+    <S.TeamContainer isApp={isApp}>
       <Container>
         {!isApp && (
           <S.TeamTitleContainer>
@@ -43,7 +43,7 @@ export default function TeamPage() {
             </S.TeamDescription>
           </S.TeamTitleContainer>
         )}
-        <S.TeamIntroduceContainer>
+        <S.TeamIntroduceContainer isApp={isApp}>
           {!isApp && (
             <S.TeamList>
               {TEAM_LIST.map(({ id, name }) => (
