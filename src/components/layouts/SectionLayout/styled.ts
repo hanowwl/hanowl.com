@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
-export const SectionLayoutContainer = styled.section`
+export const SectionLayoutContainer = styled.section<{ isApp: boolean }>`
   min-height: 100svh;
   display: flex;
   flex: 1;
@@ -10,7 +10,7 @@ export const SectionLayoutContainer = styled.section`
   justify-content: center;
   row-gap: 6rem;
   padding-top: 10rem;
-  padding-bottom: 4rem;
+  padding-bottom: ${({ isApp }) => (isApp ? "10rem" : "4rem")};
   @media screen and (max-width: 767px) {
     row-gap: 3rem;
   }

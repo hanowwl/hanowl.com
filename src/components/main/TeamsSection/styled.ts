@@ -5,7 +5,7 @@ export const TeamsSectionContainer = styled.div<{ isApp: boolean }>`
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   @media screen and (max-width: 767px) {
-    padding-bottom: ${({ isApp }) => (isApp ? "10rem" : "0")};
+    padding-bottom: ${({ isApp }) => (isApp ? "4rem" : "0")};
     grid-template-columns: repeat(1, 1fr);
   }
 `;

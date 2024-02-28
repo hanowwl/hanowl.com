@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { StaticImageData } from "next/image";
 import { useRouter } from "next/router";

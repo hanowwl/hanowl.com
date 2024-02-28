@@ -6,6 +6,7 @@ const nextConfig = {
     emotion: true,
   },
   pageExtensions: ["tsx", "api.ts"],
+  output: "standalone",
 };
 
 module.exports = nextConfig;

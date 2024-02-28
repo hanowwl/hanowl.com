@@ -2,6 +2,7 @@ import React from "react";
 
 import { Text } from "src/components/common";
 import { useFadeInScroll } from "src/hooks";
+import { useCheckAppStore } from "src/store";
 
 import * as S from "./styled";
 import { Container } from "../Container";
@@ -22,10 +23,12 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
   fullWidth,
   ...props
 }) => {
+  const { isApp } = useCheckAppStore();
+
   const { fadeInScroll } = useFadeInScroll();
 
   return (
-    <S.SectionLayoutContainer {...props}>
+    <S.SectionLayoutContainer isApp={isApp} {...props}>
       <Container>
         <S.SectionLayoutTitleContainer {...fadeInScroll({ delay: 0 })}>
           <Text size={1.8}>{subTitle}</Text>

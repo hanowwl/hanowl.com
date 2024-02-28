@@ -4,15 +4,9 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const TeamContainer = styled.div<{ isApp: boolean }>`
-  padding-top: 10rem;
-  padding-bottom: 4rem;
+  padding-top: ${({ isApp }) => (isApp ? "0" : "10rem")};
+  padding-bottom: ${({ isApp }) => (isApp ? "0" : "4rem")};
   min-height: 100vh;
-  ${({ isApp }) =>
-    isApp &&
-    css`
-      padding-top: 0rem;
-      padding-bottom: 12rem;
-    `}
 `;
 
 export const TeamTitleContainer = styled.div`
