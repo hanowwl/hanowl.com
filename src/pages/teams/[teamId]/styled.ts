@@ -2,12 +2,9 @@ import { colors } from "src/styles";
 
 import styled from "@emotion/styled";
 
-export const TeamContainer = styled.div<{ isApp: boolean }>`
-  padding-bottom: 10rem;
-  background-color: #2a2b2e;
-  body {
-    background-color: #2a2b2e;
-  }
+export const TeamContainer = styled.div`
+  padding-top: 10rem;
+  padding-bottom: 4rem;
 `;
 
 export const TeamTitleContainer = styled.div`

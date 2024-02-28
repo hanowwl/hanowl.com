@@ -26,6 +26,7 @@ export const globalStyle = () => css`
 
   body {
     color: ${colors.text};
+    background-color: ${colors.background};
   }
 
   ::-webkit-scrollbar {
