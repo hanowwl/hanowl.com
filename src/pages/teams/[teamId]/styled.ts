@@ -1,13 +1,18 @@
 import { colors } from "src/styles";
 
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const TeamContainer = styled.div<{ isApp: boolean }>`
-  padding-bottom: 10rem;
-  background-color: #2a2b2e;
-  body {
-    background-color: #2a2b2e;
-  }
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  ${({ isApp }) =>
+    isApp &&
+    css`
+      padding-top: 0rem;
+      padding-bottom: 12rem;
+    `}
 `;
 
 export const TeamTitleContainer = styled.div`
@@ -22,13 +27,18 @@ export const TeamDescription = styled.p`
   line-height: 1.3;
 `;
 
-export const TeamIntroduceContainer = styled.div`
+export const TeamIntroduceContainer = styled.div<{ isApp: boolean }>`
   display: flex;
   flex-direction: column;
   padding: 2rem 0;
   row-gap: 4rem;
   align-items: flex-start;
   justify-content: flex-start;
+  ${({ isApp }) =>
+    isApp &&
+    css`
+      padding: 0;
+    `}
 `;
 
 export const TeamList = styled.ul`

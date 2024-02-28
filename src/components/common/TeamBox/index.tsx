@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { StaticImageData } from "next/image";
+import { useRouter } from "next/router";
 
 import * as I from "src/assets";
 import { TEAM_ID_TO_TEXT, TEAM_TEXT_TO_ID } from "src/constant";
+import { useCheckAppStore } from "src/store";
 
 import * as S from "./styled";
 import { Text } from "../Text";
@@ -17,9 +19,15 @@ export interface TeamBoxCustomProps {
 export type TeamBoxProps = TeamBoxCustomProps & React.HTMLAttributes<HTMLDivElement>;
 
 export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...props }) => {
+  const { isApp } = useCheckAppStore();
+
+  const route = useRouter();
+
   const onClick = () => {
-    if (window.ReactNativeWebView) {
+    if (window.ReactNativeWebView && isApp) {
       window.ReactNativeWebView.postMessage(TEAM_TEXT_TO_ID[team]);
+    } else {
+      route.push(`/teams/${TEAM_TEXT_TO_ID[team]}`);
     }
   };
 
