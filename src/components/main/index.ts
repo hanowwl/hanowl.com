@@ -6,5 +6,5 @@ import { TeamsSection } from "./TeamsSection";
 
 export const Main = Object.assign(
   {},
-  { MainSection, HanowlSection, QnASection, IntroDeptSection: TeamsSection, EventSection },
+  { MainSection, HanowlSection, QnASection, TeamsSection, EventSection },
 );
