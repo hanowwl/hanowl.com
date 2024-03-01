@@ -8,4 +8,3 @@ export { default as SafetyIcon } from "./safety.png";
 export { default as TechIcon } from "./tech.png";
 export { default as CommonIcon } from "./common.png";
 export { default as ArrowIcon } from "./arrow.png";
-export { default as CloseIcon } from "./close.svg";
