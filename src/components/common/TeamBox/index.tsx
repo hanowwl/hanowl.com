@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
+
 import { StaticImageData } from "next/image";
 import { useRouter } from "next/router";
 
@@ -112,3 +113,5 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
     </S.TeamBox>
   );
 };
+
+export default TeamBox;
