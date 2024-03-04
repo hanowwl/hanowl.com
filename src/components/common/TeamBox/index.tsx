@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { useRouter } from "next/router";
 import { StaticImageData } from "next/image";
+import { useRouter } from "next/router";
 
 import * as I from "src/assets";
 import { TEAM_ID_TO_TEXT, TEAM_TEXT_TO_ID } from "src/constant";
