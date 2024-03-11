@@ -24,5 +24,5 @@ export const QnASectionCardContainer = styled(motion.div)<{ isApp: boolean }>`
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
-  margin-bottom: ${({ isApp }) => isApp && "2rem"};
+  padding-bottom: ${({ isApp }) => (isApp ? "3rem" : "8rem")};
 `;

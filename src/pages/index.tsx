@@ -33,12 +33,7 @@ export default function Home() {
       <Main.MainSection />
       <Main.HanowlSection records={MAIN_SECTIONS.HANOWL_RECORDS} />
       <Main.EventSection events={MAIN_SECTIONS.EVENTS} />
-      <section
-        ref={teamsRef}
-        onTouchMove={() => {
-          window.ReactNativeWebView.postMessage("touchmove");
-        }}
-      >
+      <section ref={teamsRef}>
         <Main.TeamsSection teams={MAIN_SECTIONS.TEAMS_LIST} />
       </section>
       <Main.QnASection qnaList={MAIN_SECTIONS.QUESTIONS} />
