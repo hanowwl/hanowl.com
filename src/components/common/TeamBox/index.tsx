@@ -46,12 +46,12 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
         x: Math.random() * canvas.width,
         y: -10,
         size: Math.random() * 3,
-        speed: Math.random() * 2 + 1,
+        speed: Math.random() * 6,
       };
     };
 
     const initStars = () => {
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 20; i++) {
         stars.push(createStar());
       }
     };
@@ -59,6 +59,7 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
     const updateStars = () => {
       stars.forEach((star) => {
         star.y += star.speed;
+        star.x += star.speed;
         if (star.y > canvas.height) {
           star.y = -10;
           star.x = Math.random() * canvas.width;
@@ -68,7 +69,7 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
 
     const drawStars = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "white";
+      ctx.fillStyle = "yellow";
       stars.forEach((star) => {
         ctx.beginPath();
         ctx.moveTo(star.x, star.y + star.size);
