@@ -1,17 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
+import { isIOS } from "react-device-detect";
 
 import { useRouter } from "next/router";
 
-import { useRedirectApp } from "src/hooks";
+import { AppStoreUrl, PlayStoreUrl } from "src/constant";
 
 export default function ApplyPage() {
-  const { redirectApp } = useRedirectApp();
-
   const router = useRouter();
 
   useEffect(() => {
-    redirectApp();
+    if (isIOS) {
+      router.push(AppStoreUrl, "_blank");
+    } else {
+      router.push(PlayStoreUrl, "_blank");
+    }
     router.push("/");
   }, [router]);
 }

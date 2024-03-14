@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 
 import { HanumPng } from "src/assets";
 import { AppStoreUrl, PlayStoreUrl } from "src/constant";
-import { useRedirectApp } from "src/hooks";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -31,7 +30,6 @@ const CloseIcon: React.FC<CloseIconProps> = ({ ...props }) => (
 );
 
 export const BottomBox: React.FC = () => {
-  const { redirectApp } = useRedirectApp();
   const [isClosed, setIsClosed] = useState(false);
   const router = useRouter();
 
