@@ -1,10 +1,11 @@
 import React, { SVGProps, useState } from "react";
-import { isDesktop } from "react-device-detect";
+import { isDesktop, isIOS } from "react-device-detect";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { HanumPng } from "src/assets";
+import { AppStoreUrl, PlayStoreUrl } from "src/constant";
 import { useRedirectApp } from "src/hooks";
 
 import { AnimatePresence } from "framer-motion";
@@ -35,8 +36,13 @@ export const BottomBox: React.FC = () => {
   const router = useRouter();
 
   const onBoxClick = () => {
-    if (isDesktop) return router.push("/poster");
-    else redirectApp();
+    if (isDesktop) {
+      return router.push("/poster");
+    } else if (isIOS) {
+      return router.push(AppStoreUrl, "_blank");
+    } else {
+      return router.push(PlayStoreUrl, "_blank");
+    }
   };
 
   const onCloseBoxClick = () => {
