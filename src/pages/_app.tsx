@@ -5,9 +5,9 @@ import { DefaultSeo } from "next-seo";
 
 import { AppLayout } from "src/components";
 import { DEFAULT_SEO } from "src/constant";
+import { useQueryParams } from "src/hooks";
 import { useCheckAppStore } from "src/store";
 import { colors, globalStyle } from "src/styles";
-import { useQueryParams } from "src/hooks";
 
 import { Global } from "@emotion/react";
 
