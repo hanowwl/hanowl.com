@@ -5,6 +5,7 @@ import { DefaultSeo } from "next-seo";
 
 import { AppLayout } from "src/components";
 import { DEFAULT_SEO } from "src/constant";
+import { useQueryParams } from "src/hooks";
 import { useCheckAppStore } from "src/store";
 import { colors, globalStyle } from "src/styles";
 
@@ -12,14 +13,11 @@ import { Global } from "@emotion/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const { setIsApp, isApp } = useCheckAppStore();
+  const queryParams = useQueryParams<{ isApp: boolean }>();
 
   useEffect(() => {
-    if (window && window.isNativeApp) {
-      setIsApp(Boolean(window.isNativeApp));
-    } else {
-      setIsApp(false);
-    }
-  }, [setIsApp]);
+    setIsApp(Boolean(queryParams.isApp));
+  }, [queryParams.isApp, setIsApp]);
 
   return (
     <>
