@@ -11,7 +11,7 @@ import { TEAM_ID_TO_TEXT } from "./teams";
 export const MAIN_SECTIONS = {
   HANOWL_RECORDS: [
     {
-      name: "누적 참여 학생",
+      name: "학생회 활동",
       value: { from: 0, to: 29, suffix: "년" },
     },
     {
@@ -24,7 +24,7 @@ export const MAIN_SECTIONS = {
     },
     {
       name: "한움 이용자 수",
-      value: { from: 0, to: 120, suffix: "명 +" },
+      value: { from: 0, to: 200, suffix: "명 +" },
     },
   ] as HanowlSectionProps["records"],
 
