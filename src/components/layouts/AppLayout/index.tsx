@@ -17,12 +17,12 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   const { isApp } = useCheckAppStore();
 
   useEffect(() => {
-    if (window && window.isNativeApp) {
+    if (isApp) {
       setIsLoading(false);
     } else {
       setIsLoading(false);
     }
-  }, [isApp]);
+  }, [isLoading, isApp]);
 
   return isLoading ? (
     <Container style={{ height: "calc(100vh - 9rem)", backgroundColor: colors.background }}>
