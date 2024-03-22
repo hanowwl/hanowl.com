@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import { StaticImageData } from "next/image";
 import { useRouter } from "next/router";
@@ -20,7 +20,6 @@ export type TeamBoxProps = TeamBoxCustomProps & React.HTMLAttributes<HTMLDivElem
 
 export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...props }) => {
   const { isApp } = useCheckAppStore();
-
   const route = useRouter();
 
   const onClick = () => {
@@ -31,8 +30,81 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
     }
   };
 
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+
+    if (!ctx || !canvas) return;
+
+    let animationFrameId: number;
+    const stars: { x: number; y: number; size: number; speed: number }[] = [];
+
+    const createStar = () => {
+      return {
+        x: Math.random() * canvas.width,
+        y: -10,
+        size: Math.random() * 3,
+        speed: Math.random() * 6,
+      };
+    };
+
+    const initStars = () => {
+      for (let i = 0; i < 20; i++) {
+        stars.push(createStar());
+      }
+    };
+
+    const updateStars = () => {
+      stars.forEach((star) => {
+        star.y += star.speed;
+        star.x += star.speed;
+        if (star.y > canvas.height) {
+          star.y = -10;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+    };
+
+    const drawStars = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "yellow";
+      stars.forEach((star) => {
+        ctx.beginPath();
+        ctx.moveTo(star.x, star.y + star.size);
+        ctx.lineTo(star.x + star.size, star.y);
+        ctx.lineTo(star.x, star.y - star.size);
+        ctx.lineTo(star.x - star.size, star.y);
+        ctx.closePath();
+        ctx.fill();
+      });
+    };
+
+    const animate = () => {
+      updateStars();
+      drawStars();
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    if (team === "기능부") {
+      initStars();
+      animate();
+    }
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [team]);
+
   return (
-    <S.TeamBox {...props} onClick={onClick}>
+    <S.TeamBox {...props} onClick={onClick} style={{ position: "relative" }}>
+      {team === "기능부" && (
+        <canvas
+          ref={canvasRef}
+          style={{ position: "absolute", width: "96%", height: "90%" }}
+        ></canvas>
+      )}
       <S.TeamBoxIcon src={icon} alt={team} quality={100} />
       <Text size={1.8}>{team}</Text>
       <Text size={2.4} weight={700}>
@@ -42,3 +114,5 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
     </S.TeamBox>
   );
 };
+
+export default TeamBox;
