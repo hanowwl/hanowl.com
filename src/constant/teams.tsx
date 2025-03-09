@@ -119,6 +119,7 @@ export const TEAM_LIST: TeamItem[] = [
         list: [
           "프로젝트 참여에 적극으로 참여할 수 있는 분",
           "스터디/코드리뷰 등 부서 활동에 적극적으로 참여할 수 있는 분",
+          "멘탈이 강한 분",
           "수다쟁이 환영",
         ],
       },
@@ -130,6 +131,7 @@ export const TEAM_LIST: TeamItem[] = [
           "Git/Github 등을 사용하여 버전관리 경험을 해본 분",
           "React, React Native, Typescript 등을 사용하여 개발 경험이 있는 분",
           "Python, FastApi 등을 사용하여 개발 경험이 있는 분",
+          "⭐macOS 사용자⭐",
         ],
       },
     ],
