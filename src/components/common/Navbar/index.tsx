@@ -19,7 +19,16 @@ export const Navbar: React.FC = () => {
         <Text size={2.8} weight={700} onClick={onTitleClick}>
           HANOWL
         </Text>
-        <S.NavbarLinkText href={"/teams"}>부서소개</S.NavbarLinkText>
+        <S.NavbarLinkTextBox>
+          <S.NavbarLinkText href={"/teams"}>부서소개</S.NavbarLinkText>
+          <S.NavbarLinkText
+            href={
+              "https://docs.google.com/forms/d/e/1FAIpQLSe3Z0wijuu-unboh6bisdrQkAEiQo4axVYQ-4MWkxY5-vGBmA/viewform?usp=header"
+            }
+          >
+            지원하기
+          </S.NavbarLinkText>
+        </S.NavbarLinkTextBox>
       </S.NavbarInnerContainer>
     </S.NavbarContainer>
   );
