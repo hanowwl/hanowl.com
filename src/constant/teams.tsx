@@ -131,7 +131,6 @@ export const TEAM_LIST: TeamItem[] = [
           "Git/Github 등을 사용하여 버전관리 경험을 해본 분",
           "React, React Native, Typescript 등을 사용하여 개발 경험이 있는 분",
           "Python, FastApi 등을 사용하여 개발 경험이 있는 분",
-          "⭐macOS 사용자⭐",
         ],
       },
     ],
