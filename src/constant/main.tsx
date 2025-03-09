@@ -12,7 +12,7 @@ export const MAIN_SECTIONS = {
   HANOWL_RECORDS: [
     {
       name: "학생회 활동",
-      value: { from: 0, to: 29, suffix: "년" },
+      value: { from: 0, to: 30, suffix: "년" },
     },
     {
       name: "매년 진행 행사 수",
@@ -20,7 +20,7 @@ export const MAIN_SECTIONS = {
     },
     {
       name: "전체 학생회 인원",
-      value: { from: 0, to: 29, suffix: "명" },
+      value: { from: 0, to: 32, suffix: "명" },
     },
     {
       name: "한움 이용자 수",

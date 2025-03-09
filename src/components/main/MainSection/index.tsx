@@ -30,7 +30,7 @@ export const MainSection: React.FC = () => {
             <br />
             새로운 학교를 만듭니다.
           </Text>
-          <Text size={2}>2024 HANOWL RECRUIT</Text>
+          <Text size={2}>2025 HANOWL RECRUIT</Text>
         </S.MainSectionContainer>
       )}
     </section>
