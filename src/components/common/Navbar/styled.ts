@@ -27,6 +27,11 @@ export const NavbarInnerContainer = styled(Container)`
   height: 100%;
 `;
 
+export const NavbarLinkTextBox = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+
 export const NavbarLinkText = styled(Link)`
   font-weight: 600;
   text-decoration: none;
